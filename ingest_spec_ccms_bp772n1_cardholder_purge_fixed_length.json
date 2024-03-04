@@ -1,0 +1,692 @@
+{
+    "header": [
+        {
+            "field_name": "rectype",
+            "size": 3,
+            "offset": 1,
+            "type": "string"
+        },
+        {
+            "field_name": "sysdt",
+            "size": 33,
+            "offset": 4,
+            "type": "string"
+        },
+        {
+            "field_name": "businessdt",
+            "size": 10,
+            "offset": 37,
+            "type": "string"
+        },
+        {
+            "field_name": "srcappid",
+            "size": 5,
+            "offset": 47,
+            "type": "string"
+        },
+        {
+            "field_name": "filetype",
+            "size": 8,
+            "offset": 52,
+            "type": "string"
+        },
+        {
+            "field_name": "fileseqnum",
+            "size": 6,
+            "offset": 60,
+            "type": "string"
+        },
+        {
+            "field_name": "sharekey",
+            "size": 32,
+            "offset": 66,
+            "type": "string"
+        },
+        {
+            "field_name": "filler",
+            "size": 1403,
+            "offset": 98,
+            "type": "string"
+        }
+    ],
+    "body": [
+        {
+            "field_name": "cardrandom",
+            "size": 19,
+            "offset": 1,
+            "type": "string"
+        },
+        {
+            "field_name": "cardmasking",
+            "size": 19,
+            "offset": 20,
+            "type": "string"
+        },
+        {
+            "field_name": "cardservicetype",
+            "size": 2,
+            "offset": 39,
+            "type": "string"
+        },
+        {
+            "field_name": "cardholdername",
+            "size": 50,
+            "offset": 41,
+            "type": "string"
+        },
+        {
+            "field_name": "branchorder",
+            "size": 4,
+            "offset": 91,
+            "type": "string"
+        },
+        {
+            "field_name": "buildcarddate",
+            "size": 8,
+            "offset": 95,
+            "type": "string"
+        },
+        {
+            "field_name": "cardtype",
+            "size": 5,
+            "offset": 103,
+            "type": "string"
+        },
+        {
+            "field_name": "cardstyle",
+            "size": 2,
+            "offset": 108,
+            "type": "string"
+        },
+        {
+            "field_name": "pinmailer",
+            "size": 1,
+            "offset": 110,
+            "type": "string"
+        },
+        {
+            "field_name": "mbrnum",
+            "size": 3,
+            "offset": 111,
+            "type": "string"
+        },
+        {
+            "field_name": "cardstatus",
+            "size": 2,
+            "offset": 114,
+            "type": "string"
+        },
+        {
+            "field_name": "issuedate",
+            "size": 8,
+            "offset": 116,
+            "type": "string"
+        },
+        {
+            "field_name": "activedate",
+            "size": 8,
+            "offset": 124,
+            "type": "string"
+        },
+        {
+            "field_name": "expireddate",
+            "size": 4,
+            "offset": 132,
+            "type": "string"
+        },
+        {
+            "field_name": "canceldate",
+            "size": 8,
+            "offset": 136,
+            "type": "string"
+        },
+        {
+            "field_name": "canceltime",
+            "size": 6,
+            "offset": 144,
+            "type": "string"
+        },
+        {
+            "field_name": "cancelbyuserid",
+            "size": 8,
+            "offset": 150,
+            "type": "string"
+        },
+        {
+            "field_name": "badpincount",
+            "size": 1,
+            "offset": 158,
+            "type": "int"
+        },
+        {
+            "field_name": "badpinchannel",
+            "size": 3,
+            "offset": 159,
+            "type": "string"
+        },
+        {
+            "field_name": "resetpincount",
+            "size": 1,
+            "offset": 162,
+            "type": "int"
+        },
+        {
+            "field_name": "pinoffset",
+            "size": 16,
+            "offset": 163,
+            "type": "string"
+        },
+        {
+            "field_name": "tranind",
+            "size": 16,
+            "offset": 179,
+            "type": "string"
+        },
+        {
+            "field_name": "transeqnum",
+            "size": 12,
+            "offset": 195,
+            "type": "string"
+        },
+        {
+            "field_name": "lastmadate",
+            "size": 8,
+            "offset": 207,
+            "type": "string"
+        },
+        {
+            "field_name": "lastmatime",
+            "size": 6,
+            "offset": 215,
+            "type": "string"
+        },
+        {
+            "field_name": "lastmabyusergroup",
+            "size": 3,
+            "offset": 221,
+            "type": "string"
+        },
+        {
+            "field_name": "lastmabyuserid",
+            "size": 8,
+            "offset": 224,
+            "type": "string"
+        },
+        {
+            "field_name": "updatetype",
+            "size": 1,
+            "offset": 232,
+            "type": "string"
+        },
+        {
+            "field_name": "totalusecount",
+            "size": 7,
+            "offset": 233,
+            "type": "int"
+        },
+        {
+            "field_name": "lasttrandate",
+            "size": 8,
+            "offset": 240,
+            "type": "string"
+        },
+        {
+            "field_name": "purchaseregisflag",
+            "size": 1,
+            "offset": 248,
+            "type": "string"
+        },
+        {
+            "field_name": "purchaselimit",
+            "size": 7,
+            "offset": 249,
+            "type": "int"
+        },
+        {
+            "field_name": "setpurchaselimitdate",
+            "size": 8,
+            "offset": 256,
+            "type": "string"
+        },
+        {
+            "field_name": "setpurchaselimittime",
+            "size": 6,
+            "offset": 264,
+            "type": "string"
+        },
+        {
+            "field_name": "setpurchaselimituserid",
+            "size": 8,
+            "offset": 270,
+            "type": "string"
+        },
+        {
+            "field_name": "cashwithdrawlimit",
+            "size": 7,
+            "offset": 278,
+            "type": "int"
+        },
+        {
+            "field_name": "cashadvancelimit",
+            "size": 7,
+            "offset": 285,
+            "type": "int"
+        },
+        {
+            "field_name": "setwithdrawlimitdate",
+            "size": 8,
+            "offset": 292,
+            "type": "string"
+        },
+        {
+            "field_name": "setwithdrawlimittime",
+            "size": 6,
+            "offset": 300,
+            "type": "string"
+        },
+        {
+            "field_name": "setwithdrawlimituserid",
+            "size": 8,
+            "offset": 306,
+            "type": "string"
+        },
+        {
+            "field_name": "transferlimit",
+            "size": 7,
+            "offset": 314,
+            "type": "int"
+        },
+        {
+            "field_name": "settransferlimitdate",
+            "size": 8,
+            "offset": 321,
+            "type": "string"
+        },
+        {
+            "field_name": "settransferlimittime",
+            "size": 6,
+            "offset": 329,
+            "type": "string"
+        },
+        {
+            "field_name": "settransferlimituserid",
+            "size": 8,
+            "offset": 335,
+            "type": "string"
+        },
+        {
+            "field_name": "purchaseusage",
+            "size": 13,
+            "offset": 343,
+            "type": "float"
+        },
+        {
+            "field_name": "purchasecount",
+            "size": 4,
+            "offset": 356,
+            "type": "int"
+        },
+        {
+            "field_name": "purchaselastdate",
+            "size": 8,
+            "offset": 360,
+            "type": "string"
+        },
+        {
+            "field_name": "cashwithdrawusage",
+            "size": 13,
+            "offset": 368,
+            "type": "float"
+        },
+        {
+            "field_name": "cashadvanceusage",
+            "size": 13,
+            "offset": 381,
+            "type": "float"
+        },
+        {
+            "field_name": "cashwithdrawcount",
+            "size": 4,
+            "offset": 394,
+            "type": "int"
+        },
+        {
+            "field_name": "cashwithdrawlastdate",
+            "size": 8,
+            "offset": 398,
+            "type": "string"
+        },
+        {
+            "field_name": "linkagetransferusage",
+            "size": 13,
+            "offset": 406,
+            "type": "float"
+        },
+        {
+            "field_name": "linkagetransfercount",
+            "size": 4,
+            "offset": 419,
+            "type": "int"
+        },
+        {
+            "field_name": "thirdtransferusage",
+            "size": 13,
+            "offset": 423,
+            "type": "float"
+        },
+        {
+            "field_name": "thirdtransfercount",
+            "size": 4,
+            "offset": 436,
+            "type": "int"
+        },
+        {
+            "field_name": "orftusage",
+            "size": 13,
+            "offset": 440,
+            "type": "float"
+        },
+        {
+            "field_name": "orftcount",
+            "size": 4,
+            "offset": 453,
+            "type": "int"
+        },
+        {
+            "field_name": "transferlastdate",
+            "size": 8,
+            "offset": 457,
+            "type": "string"
+        },
+        {
+            "field_name": "transferusage",
+            "size": 13,
+            "offset": 465,
+            "type": "float"
+        },
+        {
+            "field_name": "balanceinqcount",
+            "size": 4,
+            "offset": 478,
+            "type": "int"
+        },
+        {
+            "field_name": "pinchangecount",
+            "size": 4,
+            "offset": 482,
+            "type": "int"
+        },
+        {
+            "field_name": "interbankfeedate",
+            "size": 8,
+            "offset": 486,
+            "type": "string"
+        },
+        {
+            "field_name": "interbankfeemonthlycount",
+            "size": 2,
+            "offset": 494,
+            "type": "int"
+        },
+        {
+            "field_name": "withdrawalfeedate",
+            "size": 8,
+            "offset": 496,
+            "type": "string"
+        },
+        {
+            "field_name": "withdrawalfeecount",
+            "size": 2,
+            "offset": 504,
+            "type": "int"
+        },
+        {
+            "field_name": "thirdpartyfeedate",
+            "size": 8,
+            "offset": 506,
+            "type": "string"
+        },
+        {
+            "field_name": "thirdpartyfeecount",
+            "size": 2,
+            "offset": 514,
+            "type": "int"
+        },
+        {
+            "field_name": "paymentfeedate",
+            "size": 8,
+            "offset": 516,
+            "type": "string"
+        },
+        {
+            "field_name": "paymentfeecount",
+            "size": 2,
+            "offset": 524,
+            "type": "int"
+        },
+        {
+            "field_name": "atcforchip1",
+            "size": 5,
+            "offset": 526,
+            "type": "string"
+        },
+        {
+            "field_name": "atcforchip2",
+            "size": 5,
+            "offset": 531,
+            "type": "string"
+        },
+        {
+            "field_name": "fallbackallowflag",
+            "size": 1,
+            "offset": 536,
+            "type": "string"
+        },
+        {
+            "field_name": "savingaccount",
+            "size": 19,
+            "offset": 537,
+            "type": "string"
+        },
+        {
+            "field_name": "savingaccountbranch",
+            "size": 4,
+            "offset": 556,
+            "type": "string"
+        },
+        {
+            "field_name": "savingaccounttype",
+            "size": 2,
+            "offset": 560,
+            "type": "string"
+        },
+        {
+            "field_name": "currentaccount",
+            "size": 19,
+            "offset": 562,
+            "type": "string"
+        },
+        {
+            "field_name": "currentaccountbranch",
+            "size": 4,
+            "offset": 581,
+            "type": "string"
+        },
+        {
+            "field_name": "currentaccounttype",
+            "size": 2,
+            "offset": 585,
+            "type": "string"
+        },
+        {
+            "field_name": "creditnum",
+            "size": 19,
+            "offset": 587,
+            "type": "string"
+        },
+        {
+            "field_name": "creditbranch",
+            "size": 4,
+            "offset": 606,
+            "type": "string"
+        },
+        {
+            "field_name": "credittype",
+            "size": 2,
+            "offset": 610,
+            "type": "string"
+        },
+        {
+            "field_name": "pendinganuualfeedate",
+            "size": 8,
+            "offset": 612,
+            "type": "string"
+        },
+        {
+            "field_name": "pendingannualfeeflag",
+            "size": 1,
+            "offset": 620,
+            "type": "string"
+        },
+        {
+            "field_name": "pendingannualfeecount",
+            "size": 1,
+            "offset": 621,
+            "type": "int"
+        },
+        {
+            "field_name": "pendingannualfeeamt",
+            "size": 19,
+            "offset": 622,
+            "type": "float"
+        },
+        {
+            "field_name": "entryfee",
+            "size": 19,
+            "offset": 641,
+            "type": "float"
+        },
+        {
+            "field_name": "firstyearfee",
+            "size": 19,
+            "offset": 660,
+            "type": "float"
+        },
+        {
+            "field_name": "annualfee",
+            "size": 19,
+            "offset": 679,
+            "type": "float"
+        },
+        {
+            "field_name": "duedate",
+            "size": 4,
+            "offset": 698,
+            "type": "string"
+        },
+        {
+            "field_name": "lastyearfee",
+            "size": 19,
+            "offset": 702,
+            "type": "float"
+        },
+        {
+            "field_name": "lastyearfeedeductdate",
+            "size": 8,
+            "offset": 721,
+            "type": "string"
+        },
+        {
+            "field_name": "refundflag",
+            "size": 1,
+            "offset": 729,
+            "type": "string"
+        },
+        {
+            "field_name": "refundamount",
+            "size": 19,
+            "offset": 730,
+            "type": "float"
+        },
+        {
+            "field_name": "refunddate",
+            "size": 8,
+            "offset": 749,
+            "type": "string"
+        },
+        {
+            "field_name": "refundbyuserid",
+            "size": 8,
+            "offset": 757,
+            "type": "string"
+        },
+        {
+            "field_name": "staffflag",
+            "size": 1,
+            "offset": 765,
+            "type": "string"
+        },
+        {
+            "field_name": "useairportloungedate",
+            "size": 8,
+            "offset": 766,
+            "type": "string"
+        },
+        {
+            "field_name": "previousairportloungedate",
+            "size": 8,
+            "offset": 774,
+            "type": "string"
+        },
+        {
+            "field_name": "airportloungecount",
+            "size": 1,
+            "offset": 782,
+            "type": "int"
+        },
+        {
+            "field_name": "purgedate",
+            "size": 8,
+            "offset": 783,
+            "type": "string"
+        },
+        {
+            "field_name": "purgereason",
+            "size": 30,
+            "offset": 791,
+            "type": "string"
+        },
+        {
+            "field_name": "cardencryptedpb",
+            "size": 44,
+            "offset": 821,
+            "type": "string"
+        },
+        {
+            "field_name": "filler",
+            "size": 636,
+            "offset": 865,
+            "type": "string"
+        }
+    ],
+    "footer": [
+        {
+            "field_name": "rectype",
+            "size": 3,
+            "offset": 1,
+            "type": "string"
+        },
+        {
+            "field_name": "totalrecord",
+            "size": 15,
+            "offset": 4,
+            "type": "string"
+        },
+        {
+            "field_name": "filler",
+            "size": 1482,
+            "offset": 19,
+            "type": "string"
+        }
+    ]
+}

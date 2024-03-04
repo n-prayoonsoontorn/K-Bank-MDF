@@ -1,0 +1,32 @@
+{
+    "job_name": "extrct_ccms_bp772n1_cardholder_purge_s",
+    "pipeline_name": "ExtractionPipeline",
+    "area_name": "ccms",
+    "job_seq": "1",
+    "job_info": {
+        "data_source_type": "LocalLocation",
+        "file_name": "ccms_bp772n1_cardholder_purge_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.*",
+        "data_target_type": "ADLSLocation",
+        "data_target_filepath": "{{mdp_inbnd.filepath}}/ccms/ccms_bp772n1_cardholder_purge_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.*"
+    },
+    "tasks": {
+        "azcopy_data_transfer_task": {
+            "module_name": "AzCopyDataTransferTask",
+            "bypass_flag": "false",
+            "parameters": {
+                "azcopy_command": "cp",
+                "source": {
+                    "type": "LocalLocation",
+                    "filepath": "{{local_storage.filepath}}/ccms/ccms_bp772n1_cardholder_purge_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.*"
+                },
+                "target": {
+                    "type": "ADLSLocation",
+                    "account_name": "{{mdp_inbnd.account_name}}",
+                    "container_name": "{{mdp_inbnd.container_name}}",
+                    "sas_token": "{{mdp_inbnd.sas_token}}",
+                    "filepath": "{{mdp_inbnd.filepath}}/ccms/"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "job_name": "ingest_csm_custxformxconsentderivedlog_d",
+    "pipeline_name": "IngestionPipeline",
+    "job_info": {
+        "source_name": "csm",
+        "source_system_id": "780",
+        "area_name": "ingt_csm_d",
+        "raw_catalog_name": "mdp{{env}}",
+        "raw_database_name": "raw_csm",
+        "raw_table_name": "csm_custxformxconsentderivedlog",
+        "persist_catalog_name": "mdp{{env}}",
+        "persist_database_name": "persist_csm",
+        "persist_table_name": "csm_custxformxconsentderivedlog"
+    },
+    "tasks": {
+        "search_source_file_task": {
+            "module_name": "GlobSearchSourcePathTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "base_directory": "/Volumes/mdp{{env}}/inbound/source_file/mdp/csm/csm_custxformxconsentderivedlog_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.txt",
+                "allow_empty_flag": "False"
+            }
+        },
+        "read_source_file_task": {
+            "module_name": "DelimitedSourceFileReaderTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "reader_options": {
+                    "delimiter": "|",
+                    "header": "True"
+                }
+            }
+        },
+        "transform_to_raw_task": {
+            "module_name": "AddColumnsDataTnfmTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "system_column_type": "StandardSystemColumns",
+                "columns_params": {
+                    "ptn_yyyy": "cast('{{ptn_yyyy}}' as string)",
+                    "ptn_mm": "cast('{{ptn_mm}}' as string)",
+                    "ptn_dd": "cast('{{ptn_dd}}' as string)"
+                }
+            }
+        },
+        "load_to_raw_task": {
+            "module_name": "FullDumpDataLoaderTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "target_catalog_name": "mdp{{env}}",
+                "target_database_name": "raw_csm",
+                "target_table_name": "csm_custxformxconsentderivedlog",
+                "format": "parquet"
+            }
+        },
+        "read_raw_from_table_task": {
+            "module_name": "TableSourceReaderTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "target_catalog_name": "mdp{{env}}",
+                "target_database_name": "raw_csm",
+                "target_table_name": "csm_custxformxconsentderivedlog",
+                "filter_cond": "CAST(ptn_yyyy as INT) = CAST({{ptn_yyyy}} as INT) AND CAST(ptn_mm as INT) = CAST({{ptn_mm}} as INT) AND CAST(ptn_dd as INT) = CAST({{ptn_dd}} as INT)"
+            }
+        },
+        "transform_to_persist_task": {
+            "module_name": "IngtSpecDataTnfmTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "system_column_type": "StandardSystemColumns",
+                "ingestion_spec_path": "/Volumes/mdp{{env}}/artifact/mapping/mdp/ingest/csm/ingest_spec_csm_custxformxconsentderivedlog.json"
+            }
+        },
+        "load_to_persist_task": {
+            "module_name": "FullDumpDataLoaderTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "target_catalog_name": "mdp{{env}}",
+                "target_database_name": "persist_csm",
+                "target_table_name": "csm_custxformxconsentderivedlog"
+            }
+        },
+        "control_file_record_count_check_task": {
+            "module_name": "PairedControlFileCheckerTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "control_file_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/csm/csm_custxformxconsentderivedlog_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.ctl",
+                "file_type": "delimited",
+                "reader_options": {
+                    "delimiter": "|",
+                    "header": "True"
+                },
+                "record_count_column": "number_of_records"
+            }
+        }
+    }
+}

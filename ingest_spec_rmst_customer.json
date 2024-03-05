@@ -1,0 +1,3577 @@
+{
+  "job_name": "ingest_rmst_customer_d",
+  "job_info": {
+    "source_name": "rmst",
+    "raw_catalog_name": "mdp{{env}}",
+    "raw_schema_name": "raw_rmst",
+    "raw_table_name": "rmst_customer",
+    "persist_catalog_name": "mdp{{env}}",
+    "persist_schema_name": "persist_rmst",
+    "persist_table_name": "rmst_customer"
+  },
+  "mapping": [
+    {
+      "source_column_name": "id",
+      "target_column_name": "id",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "name",
+      "target_column_name": "name",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "createddate",
+      "target_column_name": "createddate",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(createddate, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "lastmodifieddate",
+      "target_column_name": "lastmodifieddate",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(lastmodifieddate, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "recordtype_name",
+      "target_column_name": "recordtype_name",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__c",
+      "target_column_name": "account_extensions__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "active_contact__pc",
+      "target_column_name": "active_contact__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "address_1__c",
+      "target_column_name": "address_1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "af_last_callreprt_opty_updated_date__c",
+      "target_column_name": "af_last_callreprt_opty_updated_date__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(af_last_callreprt_opty_updated_date__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "af_owner_formula__c",
+      "target_column_name": "af_owner_formula__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "af_port2__c",
+      "target_column_name": "af_port2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "af_port_pool_formula__c",
+      "target_column_name": "af_port_pool_formula__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "af_team_formula__c",
+      "target_column_name": "af_team_formula__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "af_temporary_customer__r_external_id__c",
+      "target_column_name": "af_temporary_customer__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ah_emp_id__c",
+      "target_column_name": "ah_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ah_name__c",
+      "target_column_name": "ah_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ah_rc_code__c",
+      "target_column_name": "ah_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "all_channels__c",
+      "target_column_name": "all_channels__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "all_customer_owner__c",
+      "target_column_name": "all_customer_owner__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "allergy_to_food__pc",
+      "target_column_name": "allergy_to_food__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "area_name__c",
+      "target_column_name": "area_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "assetcurrentasset__c",
+      "target_column_name": "assetcurrentasset__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "assistant_private_banker__r_external_id__c",
+      "target_column_name": "assistant_private_banker__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "aum_6_month_pb__c",
+      "target_column_name": "aum_6_month_pb__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "aum__c",
+      "target_column_name": "aum__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "aum_daily__c",
+      "target_column_name": "aum_daily__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "aum_pb__c",
+      "target_column_name": "aum_pb__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "bad_customer_flag__c",
+      "target_column_name": "bad_customer_flag__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "benefit_spent__c",
+      "target_column_name": "benefit_spent__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "big_investor__c",
+      "target_column_name": "big_investor__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "birthdate__pc",
+      "target_column_name": "birthdate__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "bod__c",
+      "target_column_name": "bod__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "bol__c",
+      "target_column_name": "bol__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "bol_id__c",
+      "target_column_name": "bol_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "bot_customer__c",
+      "target_column_name": "bot_customer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "branch_closeness__c",
+      "target_column_name": "branch_closeness__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "branch_closeness_name__c",
+      "target_column_name": "branch_closeness_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "branch_group__c",
+      "target_column_name": "branch_group__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "branch_manager__c",
+      "target_column_name": "branch_manager__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "branch_manager_phone__c",
+      "target_column_name": "branch_manager_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "branch_selection_details__c",
+      "target_column_name": "branch_selection_details__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "branchnamerbs__c",
+      "target_column_name": "branchnamerbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "brief_info__c",
+      "target_column_name": "brief_info__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "business_address__c",
+      "target_column_name": "business_address__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "business_code_name_en__c",
+      "target_column_name": "business_code_name_en__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "business_code_name_th__c",
+      "target_column_name": "business_code_name_th__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "business_email__c",
+      "target_column_name": "business_email__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "business_email__pc",
+      "target_column_name": "business_email__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "business_email_mashup__c",
+      "target_column_name": "business_email_mashup__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "c_sumwatchlist__c",
+      "target_column_name": "c_sumwatchlist__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "c_watchlist__c",
+      "target_column_name": "c_watchlist__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "call_report_info__c",
+      "target_column_name": "call_report_info__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "capacity_max_reward_amount__c",
+      "target_column_name": "capacity_max_reward_amount__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "cbs_evp_fsvp_id_adjust__c",
+      "target_column_name": "cbs_evp_fsvp_id_adjust__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "cbs_evp_fsvp_name_adjust__c",
+      "target_column_name": "cbs_evp_fsvp_name_adjust__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "cbs_high_value__c",
+      "target_column_name": "cbs_high_value__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "cbs_report__c",
+      "target_column_name": "cbs_report__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "cbs_service_manager_phone__c",
+      "target_column_name": "cbs_service_manager_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "cc_contacted__c",
+      "target_column_name": "cc_contacted__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "chainname_tgl__c",
+      "target_column_name": "chainname_tgl__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "changed_owner_channel__c",
+      "target_column_name": "changed_owner_channel__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "channel_to_deliver__pc",
+      "target_column_name": "channel_to_deliver__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "character__pc",
+      "target_column_name": "character__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "cheque_solution_lastestdate__c",
+      "target_column_name": "cheque_solution_lastestdate__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(cheque_solution_lastestdate__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "cheque_solution_number__c",
+      "target_column_name": "cheque_solution_number__c",
+      "data_type": "decimal(4,0)"
+    },
+    {
+      "source_column_name": "cis__c",
+      "target_column_name": "cis__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "client_group__c",
+      "target_column_name": "client_group__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "collection__pc",
+      "target_column_name": "collection__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "colour_owner__c",
+      "target_column_name": "colour_owner__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "commercial_exposure__c",
+      "target_column_name": "commercial_exposure__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "commercial_limit__c",
+      "target_column_name": "commercial_limit__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "commercial_out__c",
+      "target_column_name": "commercial_out__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "consumer_exposure__c",
+      "target_column_name": "consumer_exposure__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "consumer_limit__c",
+      "target_column_name": "consumer_limit__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "consumer_out__c",
+      "target_column_name": "consumer_out__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "contact_firstname__pc",
+      "target_column_name": "contact_firstname__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "contact_owner__pc",
+      "target_column_name": "contact_owner__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "contact_position__pc",
+      "target_column_name": "contact_position__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "contact_preference_communication__pc",
+      "target_column_name": "contact_preference_communication__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "contact_preference_last_modified_by__pc",
+      "target_column_name": "contact_preference_last_modified_by__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "contact_preference_last_modified_date__pc",
+      "target_column_name": "contact_preference_last_modified_date__pc",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(contact_preference_last_modified_date__pc, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "contact_representative_type__pc",
+      "target_column_name": "contact_representative_type__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "convert_prospect_date__c",
+      "target_column_name": "convert_prospect_date__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(convert_prospect_date__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "count_call_report_rm__c",
+      "target_column_name": "count_call_report_rm__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "count_contacted_call_report__c",
+      "target_column_name": "count_contacted_call_report__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "count_contacted_call_report_f2f__c",
+      "target_column_name": "count_contacted_call_report_f2f__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "count_contacted_call_report_phone_call__c",
+      "target_column_name": "count_contacted_call_report_phone_call__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "credit_card__c",
+      "target_column_name": "credit_card__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "credit_flag__c",
+      "target_column_name": "credit_flag__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "criminal_offense__c",
+      "target_column_name": "criminal_offense__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_activity__c",
+      "target_column_name": "current_activity__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_activity_by__c",
+      "target_column_name": "current_activity_by__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_ah_name__r_external_id__c",
+      "target_column_name": "current_ah_name__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_lead__c",
+      "target_column_name": "current_lead__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_nh_name__r_external_id__c",
+      "target_column_name": "current_nh_name__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_owner_extension__r_external_id__c",
+      "target_column_name": "current_owner_extension__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_ratio__c",
+      "target_column_name": "current_ratio__c",
+      "data_type": "decimal(8,2)"
+    },
+    {
+      "source_column_name": "current_refer__c",
+      "target_column_name": "current_refer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "current_team_name__r_external_id__c",
+      "target_column_name": "current_team_name__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "currentleadassignedto__r_employee_id__c",
+      "target_column_name": "currentleadassignedto__r_employee_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_business_status__c",
+      "target_column_name": "customer_business_status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_business_type_and_description2__c",
+      "target_column_name": "customer_business_type_and_description2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_importance_note__c",
+      "target_column_name": "customer_importance_note__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_in_action__c",
+      "target_column_name": "customer_in_action__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_name__pc",
+      "target_column_name": "customer_name__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_owner2__c",
+      "target_column_name": "customer_owner2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_owner_changed_date__c",
+      "target_column_name": "customer_owner_changed_date__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(customer_owner_changed_date__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "customer_owner_phone__c",
+      "target_column_name": "customer_owner_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_segment_desc__c",
+      "target_column_name": "customer_segment_desc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_status_desc__c",
+      "target_column_name": "customer_status_desc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_type__c",
+      "target_column_name": "customer_type__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "customer_type_dc__c",
+      "target_column_name": "customer_type_dc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "custype_code__c",
+      "target_column_name": "custype_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "de_ratio__c",
+      "target_column_name": "de_ratio__c",
+      "data_type": "decimal(8,2)"
+    },
+    {
+      "source_column_name": "debt_restructuring__c",
+      "target_column_name": "debt_restructuring__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "deposit_fund__c",
+      "target_column_name": "deposit_fund__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "derivery_channel_cbs__pc",
+      "target_column_name": "derivery_channel_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "do_not_contact_by_direct_mail__c",
+      "target_column_name": "do_not_contact_by_direct_mail__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "do_not_contact_by_e_mail__c",
+      "target_column_name": "do_not_contact_by_e_mail__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "do_not_contact_by_fax__c",
+      "target_column_name": "do_not_contact_by_fax__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "do_not_contact_by_site_visit__c",
+      "target_column_name": "do_not_contact_by_site_visit__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "do_not_contact_by_sms__c",
+      "target_column_name": "do_not_contact_by_sms__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "do_not_contact_by_telemarketing__c",
+      "target_column_name": "do_not_contact_by_telemarketing__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "document_type__c",
+      "target_column_name": "document_type__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "document_type_prospect__c",
+      "target_column_name": "document_type_prospect__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "dual_ah_rc_code__c",
+      "target_column_name": "dual_ah_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "dual_rm_name__r_employee_id__c",
+      "target_column_name": "dual_rm_name__r_employee_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "dual_rm_segment_code__c",
+      "target_column_name": "dual_rm_segment_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "dual_segment_code__c",
+      "target_column_name": "dual_segment_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "dual_segment_customer_owner__c",
+      "target_column_name": "dual_segment_customer_owner__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "dual_sub_segment_code__c",
+      "target_column_name": "dual_sub_segment_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ebanlastmodifieddate__c",
+      "target_column_name": "ebanlastmodifieddate__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(ebanlastmodifieddate__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "email_encrypted__c",
+      "target_column_name": "email_encrypted__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "estimate_sale__c",
+      "target_column_name": "estimate_sale__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "estimated_business_monthly_sales_volumee__c",
+      "target_column_name": "estimated_business_monthly_sales_volumee__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "event_name_cbs__pc",
+      "target_column_name": "event_name_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "exit__c",
+      "target_column_name": "exit__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "external_id__c",
+      "target_column_name": "external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "external_id__pc",
+      "target_column_name": "external_id__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "facebook_id__pc",
+      "target_column_name": "facebook_id__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "family_id__c",
+      "target_column_name": "family_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "favorite_food__pc",
+      "target_column_name": "favorite_food__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "favourite_brand__pc",
+      "target_column_name": "favourite_brand__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "favourite_magazine__pc",
+      "target_column_name": "favourite_magazine__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "favourite_restaurant__pc",
+      "target_column_name": "favourite_restaurant__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "favourite_sport__pc",
+      "target_column_name": "favourite_sport__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "fico_score__c",
+      "target_column_name": "fico_score__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "finserv__affiliations__pc",
+      "target_column_name": "finserv__affiliations__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__aum__c",
+      "target_column_name": "finserv__aum__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__banknumber__c",
+      "target_column_name": "finserv__banknumber__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__billingaddress__pc",
+      "target_column_name": "finserv__billingaddress__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__borrowinghistory__c",
+      "target_column_name": "finserv__borrowinghistory__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__borrowingpriorities__c",
+      "target_column_name": "finserv__borrowingpriorities__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__branchcode__c",
+      "target_column_name": "finserv__branchcode__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__branchname__c",
+      "target_column_name": "finserv__branchname__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__citizenship__pc",
+      "target_column_name": "finserv__citizenship__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__clientcategory__c",
+      "target_column_name": "finserv__clientcategory__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__communicationpreferences__pc",
+      "target_column_name": "finserv__communicationpreferences__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__contactpreference__pc",
+      "target_column_name": "finserv__contactpreference__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__conversiondatetime__c",
+      "target_column_name": "finserv__conversiondatetime__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(finserv__conversiondatetime__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "finserv__countryofbirth__pc",
+      "target_column_name": "finserv__countryofbirth__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__countryofresidence__pc",
+      "target_column_name": "finserv__countryofresidence__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__createdfromlead__pc",
+      "target_column_name": "finserv__createdfromlead__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__creditrating__c",
+      "target_column_name": "finserv__creditrating__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__creditscore__c",
+      "target_column_name": "finserv__creditscore__c",
+      "data_type": "decimal(4,0)"
+    },
+    {
+      "source_column_name": "finserv__currentemployer__pc",
+      "target_column_name": "finserv__currentemployer__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__customerid__c",
+      "target_column_name": "finserv__customerid__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__customersegment__c",
+      "target_column_name": "finserv__customersegment__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__customertimezone__pc",
+      "target_column_name": "finserv__customertimezone__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__customertype__c",
+      "target_column_name": "finserv__customertype__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__emailverified__pc",
+      "target_column_name": "finserv__emailverified__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__employedsince__pc",
+      "target_column_name": "finserv__employedsince__pc",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(finserv__employedsince__pc, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "finserv__facebook__pc",
+      "target_column_name": "finserv__facebook__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__faxverified__pc",
+      "target_column_name": "finserv__faxverified__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__financialinterests__c",
+      "target_column_name": "finserv__financialinterests__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__gender__pc",
+      "target_column_name": "finserv__gender__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__homeownership__pc",
+      "target_column_name": "finserv__homeownership__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__homephoneverified__pc",
+      "target_column_name": "finserv__homephoneverified__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__individualid__c",
+      "target_column_name": "finserv__individualid__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__individualid__pc",
+      "target_column_name": "finserv__individualid__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__individualtype__c",
+      "target_column_name": "finserv__individualtype__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__individualtype__pc",
+      "target_column_name": "finserv__individualtype__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__investmentexperience__c",
+      "target_column_name": "finserv__investmentexperience__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__investmentobjectives__c",
+      "target_column_name": "finserv__investmentobjectives__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__languagesspoken__pc",
+      "target_column_name": "finserv__languagesspoken__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__lastfourdigitssn__pc",
+      "target_column_name": "finserv__lastfourdigitssn__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__lastinteraction__c",
+      "target_column_name": "finserv__lastinteraction__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(finserv__lastinteraction__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "finserv__lastreview__c",
+      "target_column_name": "finserv__lastreview__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(finserv__lastreview__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "finserv__lasttransactiondate__c",
+      "target_column_name": "finserv__lasttransactiondate__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__lasttransactiondatejointowner__c",
+      "target_column_name": "finserv__lasttransactiondatejointowner__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(finserv__lasttransactiondatejointowner__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "finserv__lasttransactiondateprimaryowner__c",
+      "target_column_name": "finserv__lasttransactiondateprimaryowner__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(finserv__lasttransactiondateprimaryowner__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "finserv__lastusedchannel__c",
+      "target_column_name": "finserv__lastusedchannel__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__lengthofrelationship__c",
+      "target_column_name": "finserv__lengthofrelationship__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__lifetimevalue__c",
+      "target_column_name": "finserv__lifetimevalue__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__linkedin__pc",
+      "target_column_name": "finserv__linkedin__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__mailingaddress__pc",
+      "target_column_name": "finserv__mailingaddress__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__maritalstatus__pc",
+      "target_column_name": "finserv__maritalstatus__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__marketingoptout__pc",
+      "target_column_name": "finserv__marketingoptout__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__marketingsegment__c",
+      "target_column_name": "finserv__marketingsegment__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__mobileverified__pc",
+      "target_column_name": "finserv__mobileverified__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__mostusedchannel__pc",
+      "target_column_name": "finserv__mostusedchannel__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__mothermaidenname__pc",
+      "target_column_name": "finserv__mothermaidenname__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__networth__c",
+      "target_column_name": "finserv__networth__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__nextinteraction__c",
+      "target_column_name": "finserv__nextinteraction__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(finserv__nextinteraction__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "finserv__nextlifeevent__pc",
+      "target_column_name": "finserv__nextlifeevent__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__nextreview__c",
+      "target_column_name": "finserv__nextreview__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(finserv__nextreview__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "finserv__notes__c",
+      "target_column_name": "finserv__notes__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__numberofchildren__pc",
+      "target_column_name": "finserv__numberofchildren__pc",
+      "data_type": "decimal(3,0)"
+    },
+    {
+      "source_column_name": "finserv__numberofdependents__pc",
+      "target_column_name": "finserv__numberofdependents__pc",
+      "data_type": "decimal(3,0)"
+    },
+    {
+      "source_column_name": "finserv__otheraddress__pc",
+      "target_column_name": "finserv__otheraddress__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__preferredname__pc",
+      "target_column_name": "finserv__preferredname__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__primaryaddressisbilling__pc",
+      "target_column_name": "finserv__primaryaddressisbilling__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__primaryaddressismailing__pc",
+      "target_column_name": "finserv__primaryaddressismailing__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__primaryaddressisother__pc",
+      "target_column_name": "finserv__primaryaddressisother__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__primaryaddressisshipping__pc",
+      "target_column_name": "finserv__primaryaddressisshipping__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__primarycitizenship__pc",
+      "target_column_name": "finserv__primarycitizenship__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__primarycontact__c",
+      "target_column_name": "finserv__primarycontact__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__primarylanguage__pc",
+      "target_column_name": "finserv__primarylanguage__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__referredbycontact__c",
+      "target_column_name": "finserv__referredbycontact__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__referredbycontact__pc",
+      "target_column_name": "finserv__referredbycontact__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__referredbyuser__c",
+      "target_column_name": "finserv__referredbyuser__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__referredbyuser__pc",
+      "target_column_name": "finserv__referredbyuser__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__referrerscore__pc",
+      "target_column_name": "finserv__referrerscore__pc",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__relationshipstartdate__c",
+      "target_column_name": "finserv__relationshipstartdate__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(finserv__relationshipstartdate__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "finserv__reviewfrequency__c",
+      "target_column_name": "finserv__reviewfrequency__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__risktolerance__c",
+      "target_column_name": "finserv__risktolerance__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__secondarycitizenship__pc",
+      "target_column_name": "finserv__secondarycitizenship__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__secondarylanguage__pc",
+      "target_column_name": "finserv__secondarylanguage__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__servicemodel__c",
+      "target_column_name": "finserv__servicemodel__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__shippingaddress__pc",
+      "target_column_name": "finserv__shippingaddress__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__sourcesystemid__c",
+      "target_column_name": "finserv__sourcesystemid__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__sourcesystemid__pc",
+      "target_column_name": "finserv__sourcesystemid__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__status__c",
+      "target_column_name": "finserv__status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__taxbracket__pc",
+      "target_column_name": "finserv__taxbracket__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__taxid__pc",
+      "target_column_name": "finserv__taxid__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__timehorizon__c",
+      "target_column_name": "finserv__timehorizon__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalaumjointowner__c",
+      "target_column_name": "finserv__totalaumjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalaumprimaryowner__c",
+      "target_column_name": "finserv__totalaumprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalbankdeposits__c",
+      "target_column_name": "finserv__totalbankdeposits__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalbankdepositsjointowner__c",
+      "target_column_name": "finserv__totalbankdepositsjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalbankdepositsprimaryowner__c",
+      "target_column_name": "finserv__totalbankdepositsprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalfinacctsjointowner__c",
+      "target_column_name": "finserv__totalfinacctsjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalfinacctsprimaryowner__c",
+      "target_column_name": "finserv__totalfinacctsprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalfinancialaccounts__c",
+      "target_column_name": "finserv__totalfinancialaccounts__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalheldfinacctsjointowner__c",
+      "target_column_name": "finserv__totalheldfinacctsjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalheldfinacctsprimaryowner__c",
+      "target_column_name": "finserv__totalheldfinacctsprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalinsurance__c",
+      "target_column_name": "finserv__totalinsurance__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalinsurancejointowner__c",
+      "target_column_name": "finserv__totalinsurancejointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalinsuranceprimaryowner__c",
+      "target_column_name": "finserv__totalinsuranceprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalinvestments__c",
+      "target_column_name": "finserv__totalinvestments__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalinvestmentsjointowner__c",
+      "target_column_name": "finserv__totalinvestmentsjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalinvestmentsprimaryowner__c",
+      "target_column_name": "finserv__totalinvestmentsprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalliabilities__c",
+      "target_column_name": "finserv__totalliabilities__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalliabilitiesjointowner__c",
+      "target_column_name": "finserv__totalliabilitiesjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalliabilitiesprimaryowner__c",
+      "target_column_name": "finserv__totalliabilitiesprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalnonfinancialassets__c",
+      "target_column_name": "finserv__totalnonfinancialassets__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalnonfinancialassetsjointowner__c",
+      "target_column_name": "finserv__totalnonfinancialassetsjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalnonfinancialassetsprimaryowner__c",
+      "target_column_name": "finserv__totalnonfinancialassetsprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalnumberoffinaccounts__c",
+      "target_column_name": "finserv__totalnumberoffinaccounts__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totalnumberoffinaccountsjointowner__c",
+      "target_column_name": "finserv__totalnumberoffinaccountsjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalnumberoffinaccountsprimaryowner__c",
+      "target_column_name": "finserv__totalnumberoffinaccountsprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totaloutstandingcredit__c",
+      "target_column_name": "finserv__totaloutstandingcredit__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__totaloutstandingcreditjointowner__c",
+      "target_column_name": "finserv__totaloutstandingcreditjointowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totaloutstandingcreditprimaryowner__c",
+      "target_column_name": "finserv__totaloutstandingcreditprimaryowner__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__totalpremium__c",
+      "target_column_name": "finserv__totalpremium__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "finserv__totalrevenue__c",
+      "target_column_name": "finserv__totalrevenue__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "finserv__twitter__pc",
+      "target_column_name": "finserv__twitter__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__walletshare__c",
+      "target_column_name": "finserv__walletshare__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "finserv__weddinganniversary__pc",
+      "target_column_name": "finserv__weddinganniversary__pc",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(finserv__weddinganniversary__pc, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "first_visited_date__c",
+      "target_column_name": "first_visited_date__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(first_visited_date__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "generation__pc",
+      "target_column_name": "generation__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "gift_baskets_cbs__pc",
+      "target_column_name": "gift_baskets_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "gift_cbs__pc",
+      "target_column_name": "gift_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "gift_derivery__pc",
+      "target_column_name": "gift_derivery__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "grading_high_value2__c",
+      "target_column_name": "grading_high_value2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "grading_non_high_value2__c",
+      "target_column_name": "grading_non_high_value2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "greenlane__c",
+      "target_column_name": "greenlane__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "group__c",
+      "target_column_name": "group__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "group_sub_group_global__c",
+      "target_column_name": "group_sub_group_global__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "group_subgroup_teamleadname__c",
+      "target_column_name": "group_subgroup_teamleadname__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "have_you_ever_use_contact_with_consult2__c",
+      "target_column_name": "have_you_ever_use_contact_with_consult2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "health_body_life_style__pc",
+      "target_column_name": "health_body_life_style__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "health_mind_life_style__pc",
+      "target_column_name": "health_mind_life_style__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "high_value__c",
+      "target_column_name": "high_value__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "high_value_flag__pc",
+      "target_column_name": "high_value_flag__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "icr_ratio__c",
+      "target_column_name": "icr_ratio__c",
+      "data_type": "decimal(8,2)"
+    },
+    {
+      "source_column_name": "identification_no__c",
+      "target_column_name": "identification_no__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "identification_no_prospect__c",
+      "target_column_name": "identification_no_prospect__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "import_experiences__c",
+      "target_column_name": "import_experiences__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "income_to_bank_last_1_month__c",
+      "target_column_name": "income_to_bank_last_1_month__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "income_to_bank_last_year__c",
+      "target_column_name": "income_to_bank_last_year__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "income_to_bank_last_year_range__c",
+      "target_column_name": "income_to_bank_last_year_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "income_to_bank_this_year__c",
+      "target_column_name": "income_to_bank_this_year__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "income_to_bank_this_year_range__c",
+      "target_column_name": "income_to_bank_this_year_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "income_to_sme__c",
+      "target_column_name": "income_to_sme__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "incorrect_name__c",
+      "target_column_name": "incorrect_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "incorrect_phone_number__c",
+      "target_column_name": "incorrect_phone_number__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "industry_color_group__c",
+      "target_column_name": "industry_color_group__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "industry_grade__c",
+      "target_column_name": "industry_grade__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "industry_risk__c",
+      "target_column_name": "industry_risk__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "isconverted__c",
+      "target_column_name": "isconverted__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "issuedandpaidup__c",
+      "target_column_name": "issuedandpaidup__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "kpb_monthly_statement_subscription__c",
+      "target_column_name": "kpb_monthly_statement_subscription__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ksec_call_log__c",
+      "target_column_name": "ksec_call_log__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "kyb__c",
+      "target_column_name": "kyb__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "last_answer_lead_by__r_external_id__c",
+      "target_column_name": "last_answer_lead_by__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "last_answer_lead_datetime__c",
+      "target_column_name": "last_answer_lead_datetime__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(last_answer_lead_datetime__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "last_callreprt_opty_updated_date__c",
+      "target_column_name": "last_callreprt_opty_updated_date__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(last_callreprt_opty_updated_date__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "last_setup_by__c",
+      "target_column_name": "last_setup_by__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "last_setup_date__c",
+      "target_column_name": "last_setup_date__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(last_setup_date__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "last_visited_by__c",
+      "target_column_name": "last_visited_by__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "last_visited_datetime__c",
+      "target_column_name": "last_visited_datetime__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(last_visited_datetime__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "last_year_gift_cbs__pc",
+      "target_column_name": "last_year_gift_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "lead_for_feedback_cbs__c",
+      "target_column_name": "lead_for_feedback_cbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "lead_for_sales__c",
+      "target_column_name": "lead_for_sales__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "lead_sharing_expired_date__c",
+      "target_column_name": "lead_sharing_expired_date__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(lead_sharing_expired_date__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "lead_status__c",
+      "target_column_name": "lead_status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "lead_to_do__c",
+      "target_column_name": "lead_to_do__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "lead_to_inform__c",
+      "target_column_name": "lead_to_inform__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "lead_visit_cbs__c",
+      "target_column_name": "lead_visit_cbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "liabilitiesaccountpayable__c",
+      "target_column_name": "liabilitiesaccountpayable__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitiescurrentliability__c",
+      "target_column_name": "liabilitiescurrentliability__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitiesetc2__c",
+      "target_column_name": "liabilitiesetc2__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitiesetc__c",
+      "target_column_name": "liabilitiesetc__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitieslongtermloan__c",
+      "target_column_name": "liabilitieslongtermloan__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitiesnoncurrentliabilites__c",
+      "target_column_name": "liabilitiesnoncurrentliabilites__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitiesod__c",
+      "target_column_name": "liabilitiesod__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitiesshorttermloan__c",
+      "target_column_name": "liabilitiesshorttermloan__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "liabilitiestotalliability__c",
+      "target_column_name": "liabilitiestotalliability__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "life_style__pc",
+      "target_column_name": "life_style__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "life_style_details__pc",
+      "target_column_name": "life_style_details__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "line_id__pc",
+      "target_column_name": "line_id__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "main_bank__c",
+      "target_column_name": "main_bank__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "main_bank_corporate__c",
+      "target_column_name": "main_bank_corporate__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "main_bank_retail__c",
+      "target_column_name": "main_bank_retail__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "master_rm_reason__c",
+      "target_column_name": "master_rm_reason__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "mbb__c",
+      "target_column_name": "mbb__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "mbb_rbs__c",
+      "target_column_name": "mbb_rbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "merge_status__c",
+      "target_column_name": "merge_status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "merge_status_code__c",
+      "target_column_name": "merge_status_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "mf_guarantee__c",
+      "target_column_name": "mf_guarantee__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "mob__c",
+      "target_column_name": "mob__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "mob_rbs__c",
+      "target_column_name": "mob_rbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "mobile_phone_2__c",
+      "target_column_name": "mobile_phone_2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "mobile_phone__c",
+      "target_column_name": "mobile_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "monthly_income__c",
+      "target_column_name": "monthly_income__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "most_interested_topic__pc",
+      "target_column_name": "most_interested_topic__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "most_visit_place__c",
+      "target_column_name": "most_visit_place__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "msib_rbs__c",
+      "target_column_name": "msib_rbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "name_surname_en__c",
+      "target_column_name": "name_surname_en__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "name_surname_th__c",
+      "target_column_name": "name_surname_th__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "nationality_cbs__pc",
+      "target_column_name": "nationality_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "network_name__c",
+      "target_column_name": "network_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "nh_emp_id__c",
+      "target_column_name": "nh_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "nh_name__c",
+      "target_column_name": "nh_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "nh_rc_code__c",
+      "target_column_name": "nh_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "nh_tl_name__c",
+      "target_column_name": "nh_tl_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "nickname__pc",
+      "target_column_name": "nickname__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "no_of_selection__c",
+      "target_column_name": "no_of_selection__c",
+      "data_type": "decimal(2,0)"
+    },
+    {
+      "source_column_name": "number_of_product_holding__c",
+      "target_column_name": "number_of_product_holding__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "office_ext_cbs__pc",
+      "target_column_name": "office_ext_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "office_fax_mashup__c",
+      "target_column_name": "office_fax_mashup__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "office_mobile_mashup__c",
+      "target_column_name": "office_mobile_mashup__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "office_number__pc",
+      "target_column_name": "office_number__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "office_phone_mashup__c",
+      "target_column_name": "office_phone_mashup__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "online_channel__c",
+      "target_column_name": "online_channel__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "other_info_about_character__pc",
+      "target_column_name": "other_info_about_character__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "other_life_style_detail__pc",
+      "target_column_name": "other_life_style_detail__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "other_segment__c",
+      "target_column_name": "other_segment__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "owner_ah_rc_code__c",
+      "target_column_name": "owner_ah_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "owner_emp_id__c",
+      "target_column_name": "owner_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "owner_name__c",
+      "target_column_name": "owner_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "owner_name_pb__c",
+      "target_column_name": "owner_name_pb__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "owner_nh_rc_code__c",
+      "target_column_name": "owner_nh_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "owner_profile__c",
+      "target_column_name": "owner_profile__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "owner_rc_code__c",
+      "target_column_name": "owner_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ownerid_text__c",
+      "target_column_name": "ownerid_text__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "pb_last_visited_datetime__c",
+      "target_column_name": "pb_last_visited_datetime__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(pb_last_visited_datetime__c, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "pb_phone_1__c",
+      "target_column_name": "pb_phone_1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "pb_phone_2__c",
+      "target_column_name": "pb_phone_2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "pb_team_formula__c",
+      "target_column_name": "pb_team_formula__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personal_email__c",
+      "target_column_name": "personal_email__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personal_email__pc",
+      "target_column_name": "personal_email__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personal_email_mashup__c",
+      "target_column_name": "personal_email_mashup__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personal_mobile_mashup__c",
+      "target_column_name": "personal_mobile_mashup__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_1__c",
+      "target_column_name": "personalized_msg_1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_2__c",
+      "target_column_name": "personalized_msg_2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_3__c",
+      "target_column_name": "personalized_msg_3__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_4__c",
+      "target_column_name": "personalized_msg_4__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_5__c",
+      "target_column_name": "personalized_msg_5__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_6__c",
+      "target_column_name": "personalized_msg_6__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_7__c",
+      "target_column_name": "personalized_msg_7__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "personalized_msg_8__c",
+      "target_column_name": "personalized_msg_8__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ph_ca__c",
+      "target_column_name": "ph_ca__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ph_credit_card__c",
+      "target_column_name": "ph_credit_card__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ph_sav__c",
+      "target_column_name": "ph_sav__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "phone_2__c",
+      "target_column_name": "phone_2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "phone_number__pc",
+      "target_column_name": "phone_number__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "phone_numbers__pc",
+      "target_column_name": "phone_numbers__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "phonesale_service__c",
+      "target_column_name": "phonesale_service__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "port_pool__c",
+      "target_column_name": "port_pool__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "port_pool_branch__c",
+      "target_column_name": "port_pool_branch__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "port_pool_dual_rm__c",
+      "target_column_name": "port_pool_dual_rm__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "port_priority__c",
+      "target_column_name": "port_priority__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "portpoolformula__c",
+      "target_column_name": "portpoolformula__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "position_recipient_cbs__pc",
+      "target_column_name": "position_recipient_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "potential_value__c",
+      "target_column_name": "potential_value__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "presentation_skill__pc",
+      "target_column_name": "presentation_skill__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_ah_name__c",
+      "target_column_name": "previous_ah_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_dual_rm__c",
+      "target_column_name": "previous_dual_rm__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_hn_name__c",
+      "target_column_name": "previous_hn_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_hn_team__c",
+      "target_column_name": "previous_hn_team__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_inactive_bm_rc_code__c",
+      "target_column_name": "previous_inactive_bm_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_nh_name__c",
+      "target_column_name": "previous_nh_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_owner__c",
+      "target_column_name": "previous_owner__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_owner_emp_id__c",
+      "target_column_name": "previous_owner_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_owner_extension__c",
+      "target_column_name": "previous_owner_extension__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_owner_segment_code__c",
+      "target_column_name": "previous_owner_segment_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_service_rm__c",
+      "target_column_name": "previous_service_rm__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_service_rm_team__c",
+      "target_column_name": "previous_service_rm_team__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "previous_team_name__r_external_id__c",
+      "target_column_name": "previous_team_name__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "primary_contact__pc",
+      "target_column_name": "primary_contact__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "primary_segment_code__c",
+      "target_column_name": "primary_segment_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "primary_segment_desc__c",
+      "target_column_name": "primary_segment_desc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "primary_sub_segment_code__c",
+      "target_column_name": "primary_sub_segment_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "prospect_create_duration__c",
+      "target_column_name": "prospect_create_duration__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "prospect_create_duration_number__c",
+      "target_column_name": "prospect_create_duration_number__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "ps_name_cbs__c",
+      "target_column_name": "ps_name_cbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "race__c",
+      "target_column_name": "race__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "rbs_branch_closeness__c",
+      "target_column_name": "rbs_branch_closeness__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "rbs_previous_branch_closeness__c",
+      "target_column_name": "rbs_previous_branch_closeness__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "rbsbranchcode__c",
+      "target_column_name": "rbsbranchcode__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "rbsbranchmgrempid__c",
+      "target_column_name": "rbsbranchmgrempid__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "rc_code__c",
+      "target_column_name": "rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "recipient_cbs__pc",
+      "target_column_name": "recipient_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "recipient_mobile_cbs__pc",
+      "target_column_name": "recipient_mobile_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "recreation_life_style__pc",
+      "target_column_name": "recreation_life_style__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "refer_customer_type__c",
+      "target_column_name": "refer_customer_type__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "refer_source__c",
+      "target_column_name": "refer_source__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "refer_source_other__c",
+      "target_column_name": "refer_source_other__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "refer_type_other__c",
+      "target_column_name": "refer_type_other__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "refertome__c",
+      "target_column_name": "refertome__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "relationship_level__pc",
+      "target_column_name": "relationship_level__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "remaining_benefit__c",
+      "target_column_name": "remaining_benefit__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "remaining_wallet__c",
+      "target_column_name": "remaining_wallet__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "remark__c",
+      "target_column_name": "remark__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "report_sme_myteamport__c",
+      "target_column_name": "report_sme_myteamport__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "report_sme_teampool__c",
+      "target_column_name": "report_sme_teampool__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "report_wallet_size_exposure_range__c",
+      "target_column_name": "report_wallet_size_exposure_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "report_wallet_size_limit_range__c",
+      "target_column_name": "report_wallet_size_limit_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "report_wallet_size_outstanding_range__c",
+      "target_column_name": "report_wallet_size_outstanding_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "retainedearning__c",
+      "target_column_name": "retainedearning__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "returnchequenotification__c",
+      "target_column_name": "returnchequenotification__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "review_note__c",
+      "target_column_name": "review_note__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata1__c",
+      "target_column_name": "reviewportdata1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata2__c",
+      "target_column_name": "reviewportdata2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata3__c",
+      "target_column_name": "reviewportdata3__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata4__c",
+      "target_column_name": "reviewportdata4__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata5__c",
+      "target_column_name": "reviewportdata5__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata6__c",
+      "target_column_name": "reviewportdata6__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata7__c",
+      "target_column_name": "reviewportdata7__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "reviewportdata8__c",
+      "target_column_name": "reviewportdata8__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "risk__c",
+      "target_column_name": "risk__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "risk_symbol__c",
+      "target_column_name": "risk_symbol__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "rm_contact__c",
+      "target_column_name": "rm_contact__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "rm_name__c",
+      "target_column_name": "rm_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "rm_phone__c",
+      "target_column_name": "rm_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sales_division__c",
+      "target_column_name": "sales_division__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sales_kcl_trend__c",
+      "target_column_name": "sales_kcl_trend__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sales_size__c",
+      "target_column_name": "sales_size__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "salesforce_id__c",
+      "target_column_name": "salesforce_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "salessizerange__c",
+      "target_column_name": "salessizerange__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "same_cust_rm_segment__c",
+      "target_column_name": "same_cust_rm_segment__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "scriptcustomer__c",
+      "target_column_name": "scriptcustomer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "securitiesservicesgroup__c",
+      "target_column_name": "securitiesservicesgroup__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "segment__c",
+      "target_column_name": "segment__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "segmentformula__c",
+      "target_column_name": "segmentformula__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "select_branch__c",
+      "target_column_name": "select_branch__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sensitive_customer__c",
+      "target_column_name": "sensitive_customer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sensitivecustomer__c",
+      "target_column_name": "sensitivecustomer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "service_manager__c",
+      "target_column_name": "service_manager__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "service_manager_name__c",
+      "target_column_name": "service_manager_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "service_manager_phone__c",
+      "target_column_name": "service_manager_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "service_rm__c",
+      "target_column_name": "service_rm__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "service_rm_emp_id__c",
+      "target_column_name": "service_rm_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "service_rm_phone__c",
+      "target_column_name": "service_rm_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "service_team__c",
+      "target_column_name": "service_team__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "share_with__c",
+      "target_column_name": "share_with__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sharing_status__c",
+      "target_column_name": "sharing_status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "site_visit__c",
+      "target_column_name": "site_visit__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sme_service_rm_phone__c",
+      "target_column_name": "sme_service_rm_phone__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sme_temporary_customer__c",
+      "target_column_name": "sme_temporary_customer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sms__c",
+      "target_column_name": "sms__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "social_network_type__pc",
+      "target_column_name": "social_network_type__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "source_system_id__c",
+      "target_column_name": "source_system_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sp_estimated_income_entrepreneur_account__c",
+      "target_column_name": "sp_estimated_income_entrepreneur_account__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "sp_estimated_income_salary_account__c",
+      "target_column_name": "sp_estimated_income_salary_account__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "statement_email__c",
+      "target_column_name": "statement_email__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "statement_password_sms__c",
+      "target_column_name": "statement_password_sms__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "statusicon__c",
+      "target_column_name": "statusicon__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "stock_day_on_hand_days__c",
+      "target_column_name": "stock_day_on_hand_days__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "sub_group__c",
+      "target_column_name": "sub_group__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "survey_oximeter_cbs__pc",
+      "target_column_name": "survey_oximeter_cbs__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_ah_emp_id__c",
+      "target_column_name": "svm_ah_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_ah_name__c",
+      "target_column_name": "svm_ah_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_emp_id__c",
+      "target_column_name": "svm_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_in_charge__r_employee_id__c",
+      "target_column_name": "svm_in_charge__r_employee_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_name__c",
+      "target_column_name": "svm_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_nh_emp_id__c",
+      "target_column_name": "svm_nh_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_nh_name__c",
+      "target_column_name": "svm_nh_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_rc_code__c",
+      "target_column_name": "svm_rc_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_tm_emp_id__c",
+      "target_column_name": "svm_tm_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "svm_tm_name__c",
+      "target_column_name": "svm_tm_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "tax_deduction__c",
+      "target_column_name": "tax_deduction__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "team_head_pb__c",
+      "target_column_name": "team_head_pb__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "team_name__c",
+      "target_column_name": "team_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "team_structure_list_port__c",
+      "target_column_name": "team_structure_list_port__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "telemarketing__c",
+      "target_column_name": "telemarketing__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "temporary_ownership_flag__c",
+      "target_column_name": "temporary_ownership_flag__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "title__c",
+      "target_column_name": "title__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "title_number__c",
+      "target_column_name": "title_number__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "tm_emp_id__c",
+      "target_column_name": "tm_emp_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "tm_name__c",
+      "target_column_name": "tm_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "total_asset_exclude_land__c",
+      "target_column_name": "total_asset_exclude_land__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "total_benefit_contact__c",
+      "target_column_name": "total_benefit_contact__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "total_contact_of_customers__c",
+      "target_column_name": "total_contact_of_customers__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "total_credit_limit__c",
+      "target_column_name": "total_credit_limit__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "total_exposure__c",
+      "target_column_name": "total_exposure__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "total_limit__c",
+      "target_column_name": "total_limit__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "total_out__c",
+      "target_column_name": "total_out__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "total_outstanding__c",
+      "target_column_name": "total_outstanding__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "total_sme_exposure__c",
+      "target_column_name": "total_sme_exposure__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "total_sme_exposure_range__c",
+      "target_column_name": "total_sme_exposure_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "total_sme_limit__c",
+      "target_column_name": "total_sme_limit__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "total_sme_limit_range__c",
+      "target_column_name": "total_sme_limit_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "total_sme_out__c",
+      "target_column_name": "total_sme_out__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "total_sme_out_range__c",
+      "target_column_name": "total_sme_out_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "totalliabilitiesandshareholders__c",
+      "target_column_name": "totalliabilitiesandshareholders__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "totalshareholdersequity__c",
+      "target_column_name": "totalshareholdersequity__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "touch_cbs__c",
+      "target_column_name": "touch_cbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trash_pool_flag__c",
+      "target_column_name": "trash_pool_flag__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "travel_life_style__pc",
+      "target_column_name": "travel_life_style__pc",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger1__c",
+      "target_column_name": "trigger1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger2__c",
+      "target_column_name": "trigger2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger3__c",
+      "target_column_name": "trigger3__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger4__c",
+      "target_column_name": "trigger4__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger5__c",
+      "target_column_name": "trigger5__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger6__c",
+      "target_column_name": "trigger6__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger7__c",
+      "target_column_name": "trigger7__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger8__c",
+      "target_column_name": "trigger8__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger_action__c",
+      "target_column_name": "trigger_action__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger_group_name__c",
+      "target_column_name": "trigger_group_name__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger_nearest_end_date__c",
+      "target_column_name": "trigger_nearest_end_date__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "trigger_summary__c",
+      "target_column_name": "trigger_summary__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "type_of_customer__c",
+      "target_column_name": "type_of_customer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "used_reward_amount__c",
+      "target_column_name": "used_reward_amount__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "uw_group__c",
+      "target_column_name": "uw_group__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "uw_group_symbol__c",
+      "target_column_name": "uw_group_symbol__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "uw_strategy_cbs__c",
+      "target_column_name": "uw_strategy_cbs__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "vvip_flag__c",
+      "target_column_name": "vvip_flag__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "vvip_list__c",
+      "target_column_name": "vvip_list__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "wallet_size_credit_exposure_range__c",
+      "target_column_name": "wallet_size_credit_exposure_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "wallet_size_credit_limit_range__c",
+      "target_column_name": "wallet_size_credit_limit_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "wallet_size_credit_outstanding_range__c",
+      "target_column_name": "wallet_size_credit_outstanding_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "wallet_size_exposure__c",
+      "target_column_name": "wallet_size_exposure__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "wallet_size_limit__c",
+      "target_column_name": "wallet_size_limit__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "wallet_size_outstanding__c",
+      "target_column_name": "wallet_size_outstanding__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "wallet_size_rbs__c",
+      "target_column_name": "wallet_size_rbs__c",
+      "data_type": "decimal(18,0)"
+    },
+    {
+      "source_column_name": "wallet_size_rbs_range__c",
+      "target_column_name": "wallet_size_rbs_range__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "watch_list__c",
+      "target_column_name": "watch_list__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "watchlistcustomer__c",
+      "target_column_name": "watchlistcustomer__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "whitelist2rm__c",
+      "target_column_name": "whitelist2rm__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "whitelisted_e_wht__c",
+      "target_column_name": "whitelisted_e_wht__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "why_you_need_consult2__c",
+      "target_column_name": "why_you_need_consult2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "with_without_pains__c",
+      "target_column_name": "with_without_pains__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "workplace__c",
+      "target_column_name": "workplace__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "xpc__c",
+      "target_column_name": "xpc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "year_of_operation__c",
+      "target_column_name": "year_of_operation__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "createdbyid",
+      "target_column_name": "createdbyid",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r.createddate",
+      "target_column_name": "account_extensions__r_createddate",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(account_extensions__r_createddate, 'yyyy-MM-ddTHH:mm:ss.SSS+SSSS',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_account__c",
+      "target_column_name": "account_extensions__r_account__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_amount__c",
+      "target_column_name": "account_extensions__r_amount__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "account_extensions__r_app__c",
+      "target_column_name": "account_extensions__r_app__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_as_of_date_aum__c",
+      "target_column_name": "account_extensions__r_as_of_date_aum__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(account_extensions__r_as_of_date_aum__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_as_of_date_cheque__c",
+      "target_column_name": "account_extensions__r_as_of_date_cheque__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(account_extensions__r_as_of_date_cheque__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_1__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_10__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_10__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_11__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_11__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_12__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_12__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_2__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_3__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_3__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_4__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_4__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_5__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_5__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_6__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_6__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_7__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_7__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_8__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_8__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_aum_avg_bal_month_9__c",
+      "target_column_name": "account_extensions__r_aum_avg_bal_month_9__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_avg_pyrl_amt__c",
+      "target_column_name": "account_extensions__r_avg_pyrl_amt__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_c_watchlist__c",
+      "target_column_name": "account_extensions__r_c_watchlist__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_c_watchlist_wealth__c",
+      "target_column_name": "account_extensions__r_c_watchlist_wealth__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_c_watchlisttext__c",
+      "target_column_name": "account_extensions__r_c_watchlisttext__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_c_watchlistupdateby__c",
+      "target_column_name": "account_extensions__r_c_watchlistupdateby__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_c_watchlistupdatedate__c",
+      "target_column_name": "account_extensions__r_c_watchlistupdatedate__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(account_extensions__r_c_watchlistupdatedate__c, 'yyyy-MM-ddTHH:mm:ss.SSS+SSSS',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_commitcollectiontype__c",
+      "target_column_name": "account_extensions__r_commitcollectiontype__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_committopaydate__c",
+      "target_column_name": "account_extensions__r_committopaydate__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(account_extensions__r_committopaydate__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_companyrelation__c",
+      "target_column_name": "account_extensions__r_companyrelation__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_contact_frequency__c",
+      "target_column_name": "account_extensions__r_contact_frequency__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_credit__c",
+      "target_column_name": "account_extensions__r_credit__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_cu_status__c",
+      "target_column_name": "account_extensions__r_cu_status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_emailpdf__c",
+      "target_column_name": "account_extensions__r_emailpdf__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_est_incm_result__c",
+      "target_column_name": "account_extensions__r_est_incm_result__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_external_id__c",
+      "target_column_name": "account_extensions__r_external_id__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_family__c",
+      "target_column_name": "account_extensions__r_family__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_1__c",
+      "target_column_name": "account_extensions__r_field_1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_10__c",
+      "target_column_name": "account_extensions__r_field_10__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_11__c",
+      "target_column_name": "account_extensions__r_field_11__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_12__c",
+      "target_column_name": "account_extensions__r_field_12__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_13__c",
+      "target_column_name": "account_extensions__r_field_13__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_14__c",
+      "target_column_name": "account_extensions__r_field_14__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_15__c",
+      "target_column_name": "account_extensions__r_field_15__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_16__c",
+      "target_column_name": "account_extensions__r_field_16__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_17__c",
+      "target_column_name": "account_extensions__r_field_17__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_18__c",
+      "target_column_name": "account_extensions__r_field_18__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_19__c",
+      "target_column_name": "account_extensions__r_field_19__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_2__c",
+      "target_column_name": "account_extensions__r_field_2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_20__c",
+      "target_column_name": "account_extensions__r_field_20__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_3__c",
+      "target_column_name": "account_extensions__r_field_3__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_4__c",
+      "target_column_name": "account_extensions__r_field_4__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_5__c",
+      "target_column_name": "account_extensions__r_field_5__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_6__c",
+      "target_column_name": "account_extensions__r_field_6__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_7__c",
+      "target_column_name": "account_extensions__r_field_7__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_8__c",
+      "target_column_name": "account_extensions__r_field_8__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_field_9__c",
+      "target_column_name": "account_extensions__r_field_9__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_fund_update__c",
+      "target_column_name": "account_extensions__r_fund_update__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_high_value__c",
+      "target_column_name": "account_extensions__r_high_value__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_industry__c",
+      "target_column_name": "account_extensions__r_industry__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_intensity__c",
+      "target_column_name": "account_extensions__r_intensity__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_iscalculatemaxdpd__c",
+      "target_column_name": "account_extensions__r_iscalculatemaxdpd__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_lead_status__c",
+      "target_column_name": "account_extensions__r_lead_status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_lifestyle__c",
+      "target_column_name": "account_extensions__r_lifestyle__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_marital_status__c",
+      "target_column_name": "account_extensions__r_marital_status__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_marital_status_information__c",
+      "target_column_name": "account_extensions__r_marital_status_information__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_measure__c",
+      "target_column_name": "account_extensions__r_measure__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_memo1__c",
+      "target_column_name": "account_extensions__r_memo1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_memo2__c",
+      "target_column_name": "account_extensions__r_memo2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_balance_y20_21__c",
+      "target_column_name": "account_extensions__r_mf_balance_y20_21__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_balance_y20_21_no__c",
+      "target_column_name": "account_extensions__r_mf_balance_y20_21_no__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_equity_fif_y20_21__c",
+      "target_column_name": "account_extensions__r_mf_equity_fif_y20_21__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_equity_fif_y20_21_no__c",
+      "target_column_name": "account_extensions__r_mf_equity_fif_y20_21_no__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_liquidity_y20_21__c",
+      "target_column_name": "account_extensions__r_mf_liquidity_y20_21__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_liquidity_y20_21_no__c",
+      "target_column_name": "account_extensions__r_mf_liquidity_y20_21_no__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_tax_y20_21__c",
+      "target_column_name": "account_extensions__r_mf_tax_y20_21__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_tax_y20_21_no__c",
+      "target_column_name": "account_extensions__r_mf_tax_y20_21_no__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_termfund_y20_21__c",
+      "target_column_name": "account_extensions__r_mf_termfund_y20_21__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_termfund_y20_21_no__c",
+      "target_column_name": "account_extensions__r_mf_termfund_y20_21_no__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_txn_y20_21_no__c",
+      "target_column_name": "account_extensions__r_mf_txn_y20_21_no__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_mf_valid_y20_21__c",
+      "target_column_name": "account_extensions__r_mf_valid_y20_21__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_min_start_date_lead_from_website__c",
+      "target_column_name": "account_extensions__r_min_start_date_lead_from_website__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(account_extensions__r_min_start_date_lead_from_website__c, 'yyyy-MM-ddTHH:mm:ss.SSS+SSSS',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_no_of_payroll__c",
+      "target_column_name": "account_extensions__r_no_of_payroll__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_notcontactedleadsubtype__c",
+      "target_column_name": "account_extensions__r_notcontactedleadsubtype__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_notification_statement__c",
+      "target_column_name": "account_extensions__r_notification_statement__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_occupation__c",
+      "target_column_name": "account_extensions__r_occupation__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_occupation1__c",
+      "target_column_name": "account_extensions__r_occupation1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_onlinebusiness__c",
+      "target_column_name": "account_extensions__r_onlinebusiness__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_personalised_message__c",
+      "target_column_name": "account_extensions__r_personalised_message__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_pos_dt__c",
+      "target_column_name": "account_extensions__r_pos_dt__c",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(account_extensions__r_pos_dt__c, 'yyyy-MM-ddTHH:mm:ss.SSS+SSSS',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_priority__c",
+      "target_column_name": "account_extensions__r_priority__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "account_extensions__r_remark__c",
+      "target_column_name": "account_extensions__r_remark__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_riskable__c",
+      "target_column_name": "account_extensions__r_riskable__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_rm_aum__c",
+      "target_column_name": "account_extensions__r_rm_aum__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_rmf_purchase_amt__c",
+      "target_column_name": "account_extensions__r_rmf_purchase_amt__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "account_extensions__r_salary_model_result__c",
+      "target_column_name": "account_extensions__r_salary_model_result__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sender_information__c",
+      "target_column_name": "account_extensions__r_sender_information__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_all_product_code__c",
+      "target_column_name": "account_extensions__r_sp_all_product_code__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_benefits__c",
+      "target_column_name": "account_extensions__r_sp_benefits__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_canuseestincome__c",
+      "target_column_name": "account_extensions__r_sp_canuseestincome__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_canuseestincomedisplay__c",
+      "target_column_name": "account_extensions__r_sp_canuseestincomedisplay__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_canusestableincome__c",
+      "target_column_name": "account_extensions__r_sp_canusestableincome__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_canusestableincomedisplay__c",
+      "target_column_name": "account_extensions__r_sp_canusestableincomedisplay__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_cis__c",
+      "target_column_name": "account_extensions__r_sp_cis__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_e_cc__c",
+      "target_column_name": "account_extensions__r_sp_e_cc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_e_hl__c",
+      "target_column_name": "account_extensions__r_sp_e_hl__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_e_k_car_new_car__c",
+      "target_column_name": "account_extensions__r_sp_e_k_car_new_car__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_e_sme__c",
+      "target_column_name": "account_extensions__r_sp_e_sme__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_e_xpc__c",
+      "target_column_name": "account_extensions__r_sp_e_xpc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_e_xpl__c",
+      "target_column_name": "account_extensions__r_sp_e_xpl__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_estimate_income_link__c",
+      "target_column_name": "account_extensions__r_sp_estimate_income_link__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_estimated_income_entrepreneur1__c",
+      "target_column_name": "account_extensions__r_sp_estimated_income_entrepreneur1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_estimated_income_remark__c",
+      "target_column_name": "account_extensions__r_sp_estimated_income_remark__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_estimated_income_remark_1__c",
+      "target_column_name": "account_extensions__r_sp_estimated_income_remark_1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_estimated_income_salary2__c",
+      "target_column_name": "account_extensions__r_sp_estimated_income_salary2__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_remark_adhoc__c",
+      "target_column_name": "account_extensions__r_sp_remark_adhoc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_s_cc__c",
+      "target_column_name": "account_extensions__r_sp_s_cc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_s_hl__c",
+      "target_column_name": "account_extensions__r_sp_s_hl__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_s_k_car_new_car__c",
+      "target_column_name": "account_extensions__r_sp_s_k_car_new_car__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_s_xpc__c",
+      "target_column_name": "account_extensions__r_sp_s_xpc__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_sp_s_xpl__c",
+      "target_column_name": "account_extensions__r_sp_s_xpl__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_ssf_purchase_amt__c",
+      "target_column_name": "account_extensions__r_ssf_purchase_amt__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "account_extensions__r_ssf_rmf_as_of_date__c",
+      "target_column_name": "account_extensions__r_ssf_rmf_as_of_date__c",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(account_extensions__r_ssf_rmf_as_of_date__c, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "account_extensions__r_taxdeduction__c",
+      "target_column_name": "account_extensions__r_taxdeduction__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_total_ssf_rmf_purchase_amt__c",
+      "target_column_name": "account_extensions__r_total_ssf_rmf_purchase_amt__c",
+      "data_type": "decimal(16,2)"
+    },
+    {
+      "source_column_name": "account_extensions__r_trade__c",
+      "target_column_name": "account_extensions__r_trade__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_type__c",
+      "target_column_name": "account_extensions__r_type__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_typeofoccupation__c",
+      "target_column_name": "account_extensions__r_typeofoccupation__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_wallet_size_potential_group1__c",
+      "target_column_name": "account_extensions__r_wallet_size_potential_group1__c",
+      "data_type": "string"
+    },
+    {
+      "source_column_name": "account_extensions__r_wallet_size_potential_group2__c",
+      "target_column_name": "account_extensions__r_wallet_size_potential_group2__c",
+      "data_type": "string"
+    }
+  ]
+}

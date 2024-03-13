@@ -60,6 +60,8 @@ MDP GITHUB DEPLOYMENT -> https://kasikornbankgroup.sharepoint.com/:x:/r/sites/Do
 
 MDP GITHUB -> https://github.com/KBANK-KBTG-TH-MDP
 
+Sharepoint Kbank ->https://kasikornbankgroup.sharepoint.com/sites/DocumentRepository/Data%20-%20Analytics/814MDP/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2FDocumentRepository%2FData%20%2D%20Analytics%2F814MDP&viewpath=%2Fsites%2FDocumentRepository%2FData%20%2D%20Analytics%2F814MDP%2FForms%2FAllItems%2Easpx&id=%2Fsites%2FDocumentRepository%2FData%20%2D%20Analytics%2F814MDP%2FFoundation%2FIngestion%2F01%20Analysis%20%26%20Design%2F01%20CBR%20Specification%2FCardlink&viewid=553e9907%2Da933%2D49b6%2D8b86%2Dcc04ad413d47&OR=Teams%2DHL&CT=1710324480446&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDAyMDIwNTUxNSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D
+
 
 KAC01151 -> แก้ว
 

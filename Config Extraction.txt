@@ -1,0 +1,81 @@
+Config Extraction
+
+Command -> /app/mdp/script/extraction/extraction_wrapper.sh <number_para> <pos_dt> <config_extraction_path>
+
+Command ->/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-07" "/app/mdp/config/extraction/lpm_as400/extrct_lpm_as400_lpm_x_ip_rel_d.json"
+
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-14" "/app/mdp/config/extraction/rdm/extrct_rdm_card_tp_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ctf_tp_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_idv_incm_seg_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ip_lgl_stc_tp_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_mar_st_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_nat_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ocp_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_prof_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_seg_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_idy_cl_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_idy_cl_sub_grp_cd_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_pim_coa_pd_d.json"
+
+
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_relar_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_othdoc_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_org_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipxcontact_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipxar_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipxaddr_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipsegment_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ip_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_idv_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_histsegm_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_doctp_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_dntcnt_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_conttp_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_continfo_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_cntreltp_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ar_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_addr_d.json"
+
+
+
+
+
+
+
+
+
+
+CCMSP.BP772N1.CARDHOLDER.PURGE.YYYYMMDD.txt
+
+extrct_ccms_bda772n4_cardregister_d.json
+Config Extraction -> /app/mdp/config/extraction/rdm
+
+VM Source ->/datasource/inbound/source_file/mdp/dih/
+
+
+dev: https://adb-1225054441296002.2.azuredatabricks.net/
+uat : https://adb-4442660146095337.17.azuredatabricks.net/
+
+
+KAC01151 -> แก้ว
+
+KAC00882 -> พี่ดา
+
+Titsanu Wantaratorn -> พี่นนท์ ขอ Motty for VM 
+Access GIT  -> พี่ฝน
+Access Databricks -> พี่ฝน
+
+-------VM--------
+Connect VPN
+
+SSH information
+IP: 172.30.68.219
+Port: 22
+Username: mdpapp
+Password: D3f@ultPwd#8
+
+remote host = IP
+username: mdpapp 
+password มันจะให้กรอกหลังกด ok ครับ
+
+C:\user\...\Appdata\Local\TempMxt215\bin\...(mottynew.exe)

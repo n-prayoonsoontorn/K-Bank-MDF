@@ -56,6 +56,10 @@ VM Source ->/datasource/inbound/source_file/mdp/dih/
 dev: https://adb-1225054441296002.2.azuredatabricks.net/
 uat : https://adb-4442660146095337.17.azuredatabricks.net/
 
+MDP GITHUB DEPLOYMENT -> https://kasikornbankgroup.sharepoint.com/:x:/r/sites/DocumentRepository/Data%20-%20Analytics/_layouts/15/Doc.aspx?sourcedoc=%7Be57ec216-7201-43a8-b39d-c046e17d2a90%7D&action=edit&activeCell=%27Git%20PR%20Details%27!D88&wdinitialsession=0a4fae2b-877a-8c67-5b34-c57293c21cf6&wdrldsc=6&wdrldc=1&wdrldr=AccessTokenExpiredWarningOrgPolicyRestriction%2CRefr
+
+MDP GITHUB -> https://github.com/KBANK-KBTG-TH-MDP
+
 
 KAC01151 -> แก้ว
 

@@ -17,7 +17,7 @@
             "module_name": "GlobSearchSourcePathTask",
             "bypass_flag": "False",
             "parameters": {
-                "base_directory": "/Volumes/mdp{{env}}/inbound/source_file/mdp/lec/LECP.LEC3D18.txt",
+                "base_directory": "/Volumes/mdp{{env}}/inbound/source_file/mdp/lec/LECP.LEC3D18_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.TXT",
                 "allow_empty_flag": "False"
             }
         },
@@ -81,16 +81,14 @@
             }
         },
         "control_file_record_count_check_task": {
-            "module_name": "PairedControlFileCheckerTask",
+            "module_name": "DelimitedControlFileCheckerTask",
             "bypass_flag": "False",
             "parameters": {
-                "control_file_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/lec/LECP.LEC3D18.ctl",
-                "file_type": "delimited",
+                "control_file_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/lec/LECP.LEC3D18_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.TXT",
                 "reader_options": {
                     "delimiter": "|",
                     "header": "True"
-                },
-                "record_count_column": "number_of_records"
+                }
             }
         }
     }

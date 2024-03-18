@@ -1,0 +1,97 @@
+{
+    "job_name": "ingest_ccms_bda772n2_cardholder_full_dih_enc_d",
+    "pipeline_name": "IngestionPipeline",
+    "job_info": {
+        "source_name": "ccms",
+        "source_system_id": "772",
+        "area_name": "ingt_ccms_d",
+        "raw_catalog_name": "mdp{{env}}",
+        "raw_database_name": "raw_ccms",
+        "raw_table_name": "ccms_bda772n2_cardholder_full_dih_enc",
+        "persist_catalog_name": "mdp{{env}}",
+        "persist_database_name": "persist_ccms",
+        "persist_table_name": "ccms_bda772n2_cardholder_full_dih_enc"
+    },
+    "tasks": {
+        "search_source_file_task": {
+            "module_name": "GlobSearchSourcePathTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "base_directory": "/Volumes/mdp{{env}}/inbound/source_file/mdp/ccms/ccms_bda772n2_cardholder_full_dih_enc_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.txt",
+                "allow_empty_flag": "False"
+            }
+        },
+        "read_source_file_task": {
+            "module_name": "CCMSFixedLengthSourceFileReaderTask",
+            "bypass_flag": false,
+            "parameters": {
+                "length_mapping_config_path": "/Volumes/mdp{{env}}/artifact/mapping/mdp/ingest/ccms/ingest_spec_ccms_bda772n2_cardholder_full_dih_enc_fixed_length.json",
+                "number_of_row_header": 1,
+                "number_of_row_footer": 1,
+                "key_config_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/ccms/ccms_bda772n2_cardholder_full_dih_enc_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.key"
+            }
+        },
+        "transform_to_raw_task": {
+            "module_name": "AddColumnsDataTnfmTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "system_column_type": "StandardSystemColumns",
+                "columns_params": {
+                    "ptn_yyyy": "cast('{{ptn_yyyy}}' as string)",
+                    "ptn_mm": "cast('{{ptn_mm}}' as string)",
+                    "ptn_dd": "cast('{{ptn_dd}}' as string)"
+                }
+            }
+        },
+        "load_to_raw_task": {
+            "module_name": "FullDumpDataLoaderTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "target_catalog_name": "mdp{{env}}",
+                "target_database_name": "raw_ccms",
+                "target_table_name": "ccms_bda772n2_cardholder_full_dih_enc",
+                "format": "parquet"
+            }
+        },
+        "read_raw_from_table_task": {
+            "module_name": "TableSourceReaderTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "target_catalog_name": "mdp{{env}}",
+                "target_database_name": "raw_ccms",
+                "target_table_name": "ccms_bda772n2_cardholder_full_dih_enc",
+                "filter_cond": "CAST(ptn_yyyy as INT) = CAST({{ptn_yyyy}} as INT) AND CAST(ptn_mm as INT) = CAST({{ptn_mm}} as INT) AND CAST(ptn_dd as INT) = CAST({{ptn_dd}} as INT)"
+            }
+        },
+        "transform_to_persist_task": {
+            "module_name": "IngtSpecDataTnfmTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "system_column_type": "StandardSystemColumns",
+                "ingestion_spec_path": "/Volumes/mdp{{env}}/artifact/mapping/mdp/ingest/ccms/ingest_spec_ccms_bda772n2_cardholder_full_dih_enc.json"
+            }
+        },
+        "load_to_persist_task": {
+            "module_name": "FullDumpDataLoaderTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "target_catalog_name": "mdp{{env}}",
+                "target_database_name": "persist_ccms",
+                "target_table_name": "ccms_bda772n2_cardholder_full_dih_enc"
+            }
+        },
+        "control_file_record_count_check_task": {
+            "module_name": "PairedControlFileCheckerTask",
+            "bypass_flag": "False",
+            "parameters": {
+                "control_file_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/ccms/ccms_bda772n2_cardholder_full_dih_enc_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.ctl",
+                "file_type": "delimited",
+                "reader_options": {
+                    "delimiter": "|",
+                    "header": "True"
+                },
+                "record_count_column": "number_of_records"
+            }
+        }
+    }
+}

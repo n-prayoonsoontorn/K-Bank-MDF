@@ -1,0 +1,19 @@
+[
+    {
+        "job_name": "ingest_lpm_as400_lpm_x_ip_rel_d",
+        "dependency_check_type": "oper_log_table",
+        "dependent_job_type": "ingestion",
+        "dependent_job_name": "ingest_lpm_as400_lpm_x_ip_rel_d",
+        "dependent_catalog_name": "mdp{{ env }}",
+        "dependent_database_name": "persist_lpm_as400",
+        "dependent_table_name": "lpm_as400_lpm_x_ip_rel",
+        "dependent_dates": {
+            "prev_dt": {
+                "end": "{{ pos_dt }}",
+                "freq": "D",
+                "periods": 2,
+                "inclusive": "left"
+            }
+        }
+    }
+]

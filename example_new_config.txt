@@ -1,149 +1,17 @@
-{
-    "job_name": "ingest_cardlink_kb1dh001_cp1t170_01_s",
-    "pipeline_name": "IngestionPipeline",
-    "job_info": {
-        "source_name": "cardlink",
-        "source_system_id": "268",
-        "area_name": "ingt_cardlink_d",
-        "raw_catalog_name": "mdp{{env}}",
-        "raw_database_name": "raw_cardlink",
-        "raw_table_name": "cardlink_kb1dh001_cp1t170_01",
-        "persist_catalog_name": "mdp{{env}}",
-        "persist_database_name": "persist_cardlink",
-        "persist_table_name": "cardlink_kb1dh001_cp1t170_01"
-    },
-    "tasks": {
-        "search_source_file_task": {
-            "module_name": "GlobSearchSourcePathTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "base_directory": "/Volumes/mdp{{env}}/inbound/source_file/mdp/cardlink/CPACP.DIH.KB1DH001.CP1T170.D{{ptn_dd}}{{ptn_mm}}{{ptn_yyyy[2:]}}.TXT",
-                "allow_empty_flag": "False"
-            }
-        },
-        "read_source_file_task": {
-            "module_name": "DelimitedSourceFileReaderTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "reader_options": {
-                    "delimiter": "|",
-                    "header": "False"
-                },
-                "ref_schema": {
-                    "database_table": "mdp{{env}}.raw_cardlink.cardlink_kb1dh001_cp1t170_01",
-                    "exclude_columns": [
-                        "pos_dt",
-                        "load_tms",
-                        "src_sys_id",
-                        "ptn_yyyy",
-                        "ptn_mm",
-                        "ptn_dd"
-                    ]
-                },
-                "number_of_row_header": 1,
-                "number_of_row_footer": 1
-            }
-        },
-        "transform_to_raw_task": {
-            "module_name": "AddColumnsDataTnfmTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "system_column_type": "StandardSystemColumns",
-                "columns_params": {
-                    "ptn_yyyy": "cast('{{ptn_yyyy}}' as string)",
-                    "ptn_mm": "cast('{{ptn_mm}}' as string)",
-                    "ptn_dd": "cast('{{ptn_dd}}' as string)"
-                }
-            }
-        },
-        "load_to_raw_task": {
-            "module_name": "FullDumpDataLoaderTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "target_catalog_name": "mdp{{env}}",
-                "target_database_name": "raw_cardlink",
-                "target_table_name": "cardlink_kb1dh001_cp1t170_01",
-                "format": "parquet"
-            }
-        },
-        "read_raw_from_table_task": {
-            "module_name": "TableSourceReaderTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "target_catalog_name": "mdp{{env}}",
-                "target_database_name": "raw_cardlink",
-                "target_table_name": "cardlink_kb1dh001_cp1t170_01",
-                "filter_cond": "CAST(ptn_yyyy as INT) = CAST({{ptn_yyyy}} as INT) AND CAST(ptn_mm as INT) = CAST({{ptn_mm}} as INT) AND CAST(ptn_dd as INT) = CAST({{ptn_dd}} as INT)"
-            }
-        },
-        "transform_to_persist_task": {
-            "module_name": "IngtSpecDataTnfmTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "system_column_type": "StandardSystemColumns",
-                "ingestion_spec_path": "/Volumes/mdp{{env}}/artifact/mapping/mdp/ingest/cardlink/ingest_spec_cardlink_kb1dh001_cp1t170_01.json",
-                "filter_cond": "record_type = 'P'"  // <column_name_to_filter> = '<value_to_filter>' 1 file 2 tables
-            }
-        },
-        "load_to_persist_task": {
-            "module_name": "FullDumpDataLoaderTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "target_catalog_name": "mdp{{env}}",
-                "target_database_name": "persist_cardlink",
-                "target_table_name": "cardlink_kb1dh001_cp1t170_01"
-            }
-        },
-        "control_file_record_count_check_task": {
-            "module_name": "DelimitedControlFileCheckerTask",
-            "bypass_flag": "False",
-            "parameters": {
-                "control_file_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/cardlink/CPACP.DIH.KB1DH001.CP1T170.D{{ptn_dd}}{{ptn_mm}}{{ptn_yyyy[2:]}}.TXT",
-                "reader_options": {
-                    "delimiter": "|",
-                    "header": "False"
-                },
-                "ref_schema": {
-                    "database_table": "mdp{{env}}.raw_cardlink.cardlink_kb1dh001_cp1t170_01",
-                    "exclude_columns": [
-                        "pos_dt",
-                        "load_tms",
-                        "src_sys_id",
-                        "ptn_yyyy",
-                        "ptn_mm",
-                        "ptn_dd"
-                    ]
-                },
-                "number_of_row_header": 1,
-                "number_of_row_footer": 1,
-                "record_count_index": {
-                    "footer": {
-                        "column_index": 3,
-                        "row_index": 0
-                    }
-                }
-            }
-        },
-        "record_count_check_task": { // apply all
-            "module_name": "IngestionRecordCountCheckTask",
-            "bypass_flag": false,
-            "parameters": {
-                "raw_database_table": "mdp{{env}}.raw_fwtest.sample_sit",
-                "raw_filter_cond": "pos_dt = '{{pos_dt}}'",
-                "persist_database_table": "mdp{{env}}.persist_fwtest.sample_sit",
-                "persist_filter_cond": "pos_dt = '{{pos_dt}}'"
-            }
-        },
-        "execute_script_record_count_check_task": { // 1 file 2 tables, only last job
-            "module_name": "ExecuteScriptRecordCountCheckTask",
-            "bypass_flag": false,
-            "parameters": {
-                "script_path":"/Workspace/script/mdp/ingest/audit/<area>/<job_name>"
-            }
-        }
-    }
-}
-
-
 
 https://teams.microsoft.com/l/meetup-join/19%3ameeting_MGFiM2IwY2MtNzYxYy00YTI4LTg4MDItNGRhYWFiY2I4NWJi%40thread.v2/0?context=%7b%22Tid%22%3a%22e0793d39-0939-496d-b129-198edd916feb%22%2c%22Oid%22%3a%22fe11bbb1-4e7c-43d2-b79e-345fb22c3414%22%7d
+
+
+
+
+
+CPACP.DIH.KB1DH001.CP1T170.D130324.TXT -> NOT HAVE IN INBOUND SO JOB CONFIG WILL CAN'T RUN
+CPACP.DIH.KB1DH017.CPAMT.D110324.TXT 
+CPACP.DIH.KB1DH018.CPSRPTT.D110324.TXT -> FILE .TXT (WRONG CBR)
+CPACP.DIH.KB1DH019.CC1T377.D120324.TXT
+CPACP.DIH.KB1DH023.LBPTTRN.D110324.TXT -> FILE .TXT (WRONG CBR)
+CPACP.DIH.KB1DH025.CPCAH.D130324.TXT 
+CPACP.DIH.KB1DH031.CC1D583B.D110324.TXT -> FILE .TXT (WRONG CBR) 
+CPACP.DIH.KB1DH038.CC1D5012.D110324.TXT
+CPACP.DIH.KB1DH039.CCND5012.D130324.TXT 
+CPACP.DIH.KB1DH045.CC1D289G.D120324.txt ->  DOC SAID (.TXT) NOT UPDATE (.txt)

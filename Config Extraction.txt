@@ -4,52 +4,87 @@ Command -> /app/mdp/script/extraction/extraction_wrapper.sh <number_para> <pos_d
 
 Command ->/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-07" "/app/mdp/config/extraction/lpm_as400/extrct_lpm_as400_lpm_x_ip_rel_d.json"
 
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-14" "/app/mdp/config/extraction/rdm/extrct_rdm_card_tp_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ctf_tp_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_idv_incm_seg_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ip_lgl_stc_tp_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_mar_st_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_nat_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ocp_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_prof_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_seg_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_idy_cl_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_idy_cl_sub_grp_cd_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/rdm/extrct_rdm_pim_coa_pd_d.json"
+RDM
+1. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_card_tp_cd_d.json"
+2. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ctf_tp_cd_d.json"
+3. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_idv_incm_seg_cd_d.json"
+4. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ip_lgl_stc_tp_cd_d.json"
+5. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_mar_st_cd_d.json"
+6. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_nat_cd_d.json"
+7. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_ocp_cd_d.json"
+8. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_prof_cd_d.json"
+9. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_cst_seg_cd_d.json"
+10. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_idy_cl_cd_d.json"
+11. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_idy_cl_sub_grp_cd_d.json"
+12. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rdm/extrct_rdm_pim_coa_pd_d.json"
+
+CCMS 
+
+1. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/ccms/extrct_ccms_bda772n2_cardholder_full_dih_enc_d.json"
+2. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/ccms/extrct_ccms_bda772n4_cardregister_d.json"
+3. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/ccms/extrct_ccms_bda772n5_listcardtype_d.json"
+4. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-15" "/app/mdp/config/extraction/ccms/extrct_ccms_bp772n1_cardholder_purge_s.json"
+
+LPM-as400
+
+1. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-14" "/app/mdp/config/extraction/lpm_as400/extrct_lpm_as400_lpm_x_ip_rel_d.json"
+2. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2023-07-15" "/app/mdp/config/extraction/lpm_as400/extrct_lpm_as400_lpm_x_ip_rel_d.json"
+
+RMST
+
+1. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/rmst/extrct_rmst_customer_d.json"
 
 
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_relar_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_othdoc_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_org_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipxcontact_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipxar_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipxaddr_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ipsegment_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ip_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_idv_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_histsegm_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_doctp_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_dntcnt_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_conttp_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_continfo_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_cntreltp_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_ar_d.json"
-/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-06" "/app/mdp/config/extraction/cis/extrct_cis_addr_d.json"
+CSM
+
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_action_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_channel_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_company_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_custxformxconsentderivedlog_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_custxformxconsentderived_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_custxformxconsentlog_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_custxformxconsent_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_downstreamconfig_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_downstreamrules_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_formconsent_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_formxappr_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_formxcontent_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_originateproductcoa_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_originateproductnoncoa_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_product_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_purpose_d.json"
+/app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/csm/extrct_csm_receivertype_d.json"
+
+
+CIS
+
+1. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_addr_d.json"
+2. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_ar_d.json"
+3. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_cntreltp_d.json"
+4. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_continfo_d.json"
+5. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_conttp_d.json"
+6. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_dntcnt_d.json"
+7. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_doctp_d.json"
+8. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_histsegm_d.json"
+9. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_idv_d.json"
+10. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_ipsegment_d.json"
+11. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_ipxaddr_d.json"
+12. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_ipxar_d.json"
+13. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_ipxcontact_d.json"
+14. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_ip_d.json"
+15. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_org_d.json"
+16. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_othdoc_d.json"
+17. /app/mdp/script/extraction/extraction_wrapper.sh 9998 "2024-03-25" "/app/mdp/config/extraction/cis/extrct_cis_relar_d.json"
+
+
+Cardlink adjust done   -> la10 ,45 ,02,05,03,06,07,14,32, lbcrd
 
 
 
 
-
-
-
-
-
-
-CCMSP.BP772N1.CARDHOLDER.PURGE.YYYYMMDD.txt
-
-extrct_ccms_bda772n4_cardregister_d.json
 Config Extraction -> /app/mdp/config/extraction/rdm
 
+3 srcsys  aim to DIH  rdm lpm(1 tables) fxb(1 tables)
 VM Source ->/datasource/inbound/source_file/mdp/dih/
 
 
@@ -87,3 +122,6 @@ username: mdpapp
 password มันจะให้กรอกหลังกด ok ครับ
 
 C:\user\...\Appdata\Local\TempMxt215\bin\...(mottynew.exe)
+
+
+

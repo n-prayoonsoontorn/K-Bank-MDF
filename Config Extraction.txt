@@ -124,4 +124,39 @@ password มันจะให้กรอกหลังกด ok ครับ
 C:\user\...\Appdata\Local\TempMxt215\bin\...(mottynew.exe)
 
 
+Category	Filename	
+In Doc
+	
+In  SourceFile
+
+FCD	FCD_AR	UTF-8	UTF-8
+Cardlink	Cardlink_018	UTF-8	UTF-8
+Cardlink	Cardlink_017	UTF-8	UTF-8
+Cardlink	Cardlink_013	UTF-8	UTF-8
+Cardlink	Cardlink_014	UTF-8	UTF-8
+Cardlink_acq	cardlink_acq_ci1d1166_crdhd	UTF-8	UTF-8
+Cardlink_acq	cardlink_acq_ci1d1178_crdreg	UTF-8	UTF-8
+Cardlink_acq	cardlink_acq_ci1d1167_cardtype	UTF-8	UTF-8
+PCB_DEP	pcb_dep_cb2d0005_odencitd_sam	UTF-8	UTF-8
+PCB_DEP	pcb_dep_cls500029	TIS-620	ANSI
+PCB_DEP	pcb_dep_deptxn_db	UTF-8	UTF-8
+PCB_DEP	pcb_dep_extrate1	TIS-620	UTF-8
+PCB_DEP	pcb_dep_src_pf_ar_ca_cr_inf_dly	TIS-620	ANSI
+PCB_DEP	pcb_dep_src_pf_ar_ca_dly	TIS-620	ANSI
+PCB_DEP	pcb_dep_src_pf_ar_ca_limit_dly	TIS-620	UTF-8
+PCB_DEP	pcb_dep_src_pf_ar_fx_dly	TIS-620	ANSI
+PCB_DEP	pcb_dep_src_pf_ar_sa_dly	TIS-620	UTF-8
+PCB_DEP	pcb_dep_src_pf_ar_sf_dly	TIS-620	ANSI
+PCB_DEP	pcb_dep_src_pf_txn_mis_eft_dly	TIS-620	ANSI
+PCB_LOAN	pcb_loan_common_account_info	TIS-620	ANSI
+PCB_LOAN	pcb_loan_common_account_tier_by_time	ASCII, TIS-620	UTF-8
+ 
+PCB_LOAN	pcb_loan_common_limit_info	ASCII, TIS-620	ANSI
+PCB_LOAN	pcb_loan_common_loan_purpose_table	ASCII, TIS-620	ANSI
+PCB_LOAN	pcb_loan_common_market_code	ASCII, TIS-620	ANSI
+PCB_LOAN	pcb_loan_common_product_type	ASCII, TIS-620	UTF-8
+PCB_LOAN	pcb_loan_common_rate_type	ASCII, TIS-620	ANSI
+PCB_LOAN	pcb_loan_common_sub_type	ASCII, TIS-620	ANSI
+PCB_LOAN	pcb_loan_common_transaction_file	TIS-620	UTF-8
+
 

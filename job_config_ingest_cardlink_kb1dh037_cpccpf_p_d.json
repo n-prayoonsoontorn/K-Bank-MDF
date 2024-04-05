@@ -17,7 +17,7 @@
             "module_name": "GlobSearchSourcePathTask",
             "bypass_flag": "False",
             "parameters": {
-                "base_directory": "/Volumes/mdp{{env}}/inbound/source_file/mdp/cardlink/CPACP.DIH.KB1DH037.CPCCPF.D{{ptn_dd}}{{ptn_mm}}{{ptn_yyyy[2:]}}.txt",
+                "base_directory": "/Volumes/mdp{{env}}/inbound/source_file/mdp/cardlink/CPACP.DIH.KB1DH037.CPCCPF.D{{ptn_dd}}{{ptn_mm}}{{ptn_yyyy[2:]}}.TXT",
                 "allow_empty_flag": "False"
             }
         },
@@ -108,7 +108,7 @@
             "module_name": "DelimitedControlFileCheckerTask",
             "bypass_flag": "True",
             "parameters": {
-                "control_file_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/cardlink/CPACP.DIH.KB1DH037.CPCCPF.D{{ptn_dd}}{{ptn_mm}}{{ptn_yyyy[2:]}}.txt",
+                "control_file_path": "/Volumes/mdp{{env}}/inbound/source_file/mdp/cardlink/CPACP.DIH.KB1DH037.CPCCPF.D{{ptn_dd}}{{ptn_mm}}{{ptn_yyyy[2:]}}.TXT",
                 "reader_options": {
                     "delimiter": "|",
                     "header": "False"

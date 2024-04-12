@@ -7,6 +7,10 @@ meeting -SYNCPROGRESS ON EVENING
 https://teams.microsoft.com/l/meetup-join/19%3ameeting_MGJhOGQ4N2YtNDM3MC00YjBlLWFhZWUtYzkzYjU0MDkxOWEz%40thread.v2/0?context=%7b%22Tid%22%3a%22e0793d39-0939-496d-b129-198edd916feb%22%2c%22Oid%22%3a%22fe11bbb1-4e7c-43d2-b79e-345fb22c3414%22%7d
 
 
+1."query": "SELECT cif_number, card_no, card_type, uh_acc_number, agency_id, consent_flag, apply_kinvest_flag, sub_acc_number, fund_id, fund_type_code, fund_short_name, unit_balance_provisional, unit_balance_confirmed, salable_unit1, salable_unit2 FROM DTEADM.VW_FLT_RL_SUB_BAL_ENQ",
+
+
+
 1.
 "query": "SELECT fund_id, fund_payin_acct_no, fund_status, fund_short_name_eng, add_info_7, fund_name_eng, fund_name_thai, amc_name_eng, fund_type_desc_eng, add_info_8, aimc_fund_type, thai_individual_uh_count, thai_juristic_uh_count, foreign_individual_uh_count, foreign_juristic_uh_count, total_count_uh, thai_individual_cust_count, thai_juristic_cust_count, foreign_individual_cust_count, foreign_juristic_cust_count, total_count_cust, thai_individual_uh_unitbalance, thai_juristic_uh_unitbalance, foreign_individual_uh_unitbal, foreign_juristic_uh_unitbal, total_unitbalance_uh, thai_individual_uh_amount, thai_juristic_uh_amount, foreign_individual_uh_amount, foreign_juristic_uh_amount, total_amount_uh, TO_CHAR(CAST(app_date AS TIMESTAMP(6)), 'yyyyMMdd') AS app_date, TO_CHAR(CAST(extraction_date_time AS TIMESTAMP(6)), 'yyyy-MM-dd HH24:mm:ss.FF6') AS extraction_date_time, TO_CHAR(CAST(allocation_date AS TIMESTAMP(6)), 'yyyyMMdd') AS allocation_date, keystring, security_type, fund_type_code, fund_risk_level, fund_fx_risk_accept_flag, provisional_unit, amc_name_thai, exit_fee_rate, front_fee_rate, fund_exit_fee_rate, fund_payout_acct_no, fund_tax_no, max_buy_amount, max_sel_amount, min_buy_amount, min_sel_amount, nav_div_total_count_fore_ind, nav_div_total_count_fore_jur, nav_div_total_count_thai_ind, nav_div_total_count_thai_jur, nav_div_total_count_uh, par_value, previous_bid, previous_offer, TO_CHAR(CAST(price_date AS TIMESTAMP(6)), 'yyyyMMdd') AS price_date, price_per_unit, trustee_name, add_info_12, add_info_13, min_bal_amount FROM DTEADM.VW_FI_FND_INF_FUL",
 

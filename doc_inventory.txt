@@ -43,6 +43,16 @@ https://teams.microsoft.com/l/meetup-join/19%3ameeting_MGJhOGQ4N2YtNDM3MC00YjBlL
 
 
 
-
+[10:20 AM] Chiwitsophon, Chonnikan
+To ingest mdpdev คับๆ ฝากเช็คหน่อยว่าตัวไหนยังติดมั้ย Prayoonsoontorn, Nattapol
+Dependency	Dependency (View)	Status	Data
+persist_cardlink.cardlink_kb1dh013_eptrans	persist_cardlink_view.v_cardlink_ipp_prfl	Y	Failed
+persist_cardlink.cardlink_kb1dh018_cpsrptt	persist_cardlink_view.v_cardlink_kbnk_card_instl_txn	N	Failed
+persist_lpm_as400.lpm_as400_lmt_ar_inf_bfr_wrtof	persist_lpm_as400_view.v_lpm_as400_lmt_info_bfr_wrtoff_prfl	N	EBAN-IN
+persist_cardlink.cardlink_kb1dh037_cpccpf_d	persist_cardlink_view.v_cardlink_maintn_log_dtl	Y	Failed
+persist_trade_na.trade_na_lcr070	persist_trade_na_view.v_trade_na_trd_acct_prfl	Y	Failed
+persist_lpm_as400.lpm_as400_ln_cntg_dmmy_clss_prvn	persist_lpm_as400_view.v_lpm_as400_ln_cntg_dmmy_acct_cl_prvsn_prfl	Y	Failed
+persist_lpm_as400.lpm_as400_ar_wrtof_rcv	persist_lpm_as400_view.v_lpm_as400_wrtoff_acct_rcv_prfl	Y	Failed
+persist_lpm_as400.lpm_as400_lmt_inf_bfr_wrtof	persist_lpm_as400_view.v_lpm_as400_sub_lmt_info_bfr_wrtoff_prfl	 	EBAN-IN
 
 

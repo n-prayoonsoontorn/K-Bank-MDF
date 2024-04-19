@@ -41,6 +41,11 @@ https://teams.microsoft.com/l/meetup-join/19%3ameeting_MGJhOGQ4N2YtNDM3MC00YjBlL
 
 
 
-
+Database Name	Start Date	End Date
+persist_gts.gts_dbtl4xl6	2024-03-20	2024-03-21
+persist_gts.gts_dbttnrel	2023-07-05	2023-07-05
+persist_gts.gts_kbgt_cont_outstanding	2024-03-28	2024-03-28
+persist_gts.gts_kbgt_limit_allocated	2024-03-29	2024-04-02
+persist_gts.gts_kbgt_loan_outstanding	2024-03-27	2024-03-27
 
 

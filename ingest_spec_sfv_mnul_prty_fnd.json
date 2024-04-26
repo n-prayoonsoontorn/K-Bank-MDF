@@ -1,0 +1,229 @@
+{
+  "job_name": "ingest_sfv_mnul_prty_fnd_d",
+  "job_info": {
+    "source_name": "sfv",
+    "raw_catalog_name": "mdp{{env}}",
+    "raw_schema_name": "raw_sfv",
+    "raw_table_name": "sfv_mnul_prty_fnd",
+    "persist_catalog_name": "mdp{{env}}",
+    "persist_schema_name": "persist_sfv",
+    "persist_table_name": "sfv_mnul_prty_fnd"
+  },
+  "mapping": [
+    {
+      "source_column_name": "fnd_id",
+      "target_column_name": "fnd_id",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_id)"
+    },
+    {
+      "source_column_name": "fnd_tp_dsc",
+      "target_column_name": "fnd_tp_dsc",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_tp_dsc)"
+    },
+    {
+      "source_column_name": "survy_f",
+      "target_column_name": "survy_f",
+      "data_type": "string",
+      "column_logic": "rtrim(survy_f)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_1",
+      "target_column_name": "fnd_sub_grp_1",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_1)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_2",
+      "target_column_name": "fnd_sub_grp_2",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_2)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_3",
+      "target_column_name": "fnd_sub_grp_3",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_3)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_4",
+      "target_column_name": "fnd_sub_grp_4",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_4)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_5",
+      "target_column_name": "fnd_sub_grp_5",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_5)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_6",
+      "target_column_name": "fnd_sub_grp_6",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_6)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_7",
+      "target_column_name": "fnd_sub_grp_7",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_7)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_8",
+      "target_column_name": "fnd_sub_grp_8",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_8)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_9",
+      "target_column_name": "fnd_sub_grp_9",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_9)"
+    },
+    {
+      "source_column_name": "fnd_sub_grp_10",
+      "target_column_name": "fnd_sub_grp_10",
+      "data_type": "string",
+      "column_logic": "rtrim(fnd_sub_grp_10)"
+    },
+    {
+      "source_column_name": "lbdu_fundtype_dsc",
+      "target_column_name": "lbdu_fundtype_dsc",
+      "data_type": "string",
+      "column_logic": "rtrim(lbdu_fundtype_dsc)"
+    },
+    {
+      "source_column_name": "coa_pd_ftr_cd",
+      "target_column_name": "coa_pd_ftr_cd",
+      "data_type": "string",
+      "column_logic": "rtrim(coa_pd_ftr_cd)"
+    },
+    {
+      "source_column_name": "opn_dt",
+      "target_column_name": "opn_dt",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(opn_dt, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "due_dt",
+      "target_column_name": "due_dt",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(due_dt, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "tfr_dt",
+      "target_column_name": "tfr_dt",
+      "data_type": "timestamp",
+      "column_logic": "mdp{{env}}.udf.convert_tms(tfr_dt, 'yyyy-MM-dd HH:mm:ss',False)"
+    },
+    {
+      "source_column_name": "tfr_cnl_dsc",
+      "target_column_name": "tfr_cnl_dsc",
+      "data_type": "string",
+      "column_logic": "rtrim(tfr_cnl_dsc)"
+    },
+    {
+      "source_column_name": "rate_pct",
+      "target_column_name": "rate_pct",
+      "data_type": "decimal(7,4)"
+    },
+    {
+      "source_column_name": "prd_mo",
+      "target_column_name": "prd_mo",
+      "data_type": "string",
+      "column_logic": "rtrim(prd_mo)"
+    },
+    {
+      "source_column_name": "mstr_fnd_id",
+      "target_column_name": "mstr_fnd_id",
+      "data_type": "string",
+      "column_logic": "rtrim(mstr_fnd_id)"
+    },
+    {
+      "source_column_name": "adl_inf_1",
+      "target_column_name": "adl_inf_1",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_1)"
+    },
+    {
+      "source_column_name": "adl_inf_2",
+      "target_column_name": "adl_inf_2",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_2)"
+    },
+    {
+      "source_column_name": "adl_inf_3",
+      "target_column_name": "adl_inf_3",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_3)"
+    },
+    {
+      "source_column_name": "adl_inf_4",
+      "target_column_name": "adl_inf_4",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_4)"
+    },
+    {
+      "source_column_name": "adl_inf_5",
+      "target_column_name": "adl_inf_5",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_5)"
+    },
+    {
+      "source_column_name": "adl_inf_6",
+      "target_column_name": "adl_inf_6",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_6)"
+    },
+    {
+      "source_column_name": "adl_inf_7",
+      "target_column_name": "adl_inf_7",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_7)"
+    },
+    {
+      "source_column_name": "adl_inf_8",
+      "target_column_name": "adl_inf_8",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_8)"
+    },
+    {
+      "source_column_name": "adl_inf_9",
+      "target_column_name": "adl_inf_9",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_9)"
+    },
+    {
+      "source_column_name": "adl_inf_10",
+      "target_column_name": "adl_inf_10",
+      "data_type": "string",
+      "column_logic": "rtrim(adl_inf_10)"
+    },
+    {
+      "source_column_name": "data_src",
+      "target_column_name": "data_src",
+      "data_type": "string",
+      "column_logic": "rtrim(data_src)"
+    },
+    {
+      "source_column_name": "amc_cd",
+      "target_column_name": "amc_cd",
+      "data_type": "string",
+      "column_logic": "rtrim(amc_cd)"
+    },
+    {
+      "source_column_name": "rsk_dsclr_th",
+      "target_column_name": "rsk_dsclr_th",
+      "data_type": "string",
+      "column_logic": "rtrim(rsk_dsclr_th)"
+    },
+    {
+      "source_column_name": "rsk_dsclr_en",
+      "target_column_name": "rsk_dsclr_en",
+      "data_type": "string",
+      "column_logic": "rtrim(rsk_dsclr_en)"
+    }
+  ]
+}

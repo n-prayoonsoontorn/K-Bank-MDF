@@ -1,3 +1,8 @@
+ตอนนี้ ingest ไป 60/62 
+อีก 2 ตัว  pending ครับ 
+persist_cardlink_view.v_cardlink_card_prfl ->  order run อยู่คับ ครับ เนื่องจากขนาดไฟล์เลยใช้วิธีนี้
+persist_pcb_dep_view.v_pcb_dep_sa_prfl ->  เหมือน จะมีปัญหาเกี่ยวกับ workflow ในการรันครับเนื่องจากตัวนี้ใช้การรันนาน เดี๋ยว investigate ต่อพน.ครับ 
+
 Config Extraction
 
 Command -> /app/mdp/script/extraction/extraction_wrapper.sh <number_para> <pos_dt> <config_extraction_path>

@@ -130,5 +130,39 @@ https://kasikornbankgroup.sharepoint.com/:x:/s/DocumentRepository/Data%20-%20Ana
 https://kasikornbankgroup.sharepoint.com/:x:/s/DocumentRepository/Data%20-%20Analytics/EVNQm3Jxo0xBlN_XYjolql0Bsq4FIiqlOg11xdBTKDqPqQ?e=BCxCeG
 
 
+# Sample records
+records = [
+    ["KBANK", "140101001", "Domestic Factoring with recourse without insurance", "Domestic", "With Recourse", "Without Insurance", "Fund", "Non FCI", "30", "30", "0.0", "", "K0407068", "2024-03-13", "16:36:27", "8", "", "2", "Short Term", "Admin", "2019-01-01", "00:00:00", "DO", "WR", "WO", "F", "NF", "S", "3.0"],
+    # More records here if needed
+]
 
+# Function to sum up values in a specific column
+def sum_column(records, column_name):
+    # Find the index of the column
+    column_index = None
+    for i, column in enumerate(records[0]):
+        if column.strip('"') == column_name:
+            column_index = i
+            break
+    
+    if column_index is None:
+        return None  # Column not found
+    
+    # Sum up the values in the column
+    total = 0
+    for record in records[1:]:
+        value = float(record[column_index].strip('"'))
+        total += value
+    
+    return total
 
+# Example usage
+column_name = "spreadlatecharge"
+total_sum = sum_column(records, column_name)
+print(f"Total sum of '{column_name}': {total_sum}")
+
+"orgcode"|"productcode"|"productname"|"productgroup"|"recoursetype"|"insurancetype"|"fundtype"|"fci"|"pastdue"|"daysdefault"|"defaultrate"|"remarks"|"updateby"|"updatedate"|"updatetime"|"version"|"bookingtype"|"status"|"term"|"createby"|"createdate"|"createtime"|"productgroupcode"|"recoursetypecode"|"insurancetypecode"|"fundtypecode"|"fcicode"|"termcode"|"spreadlatecharge"
+"KBANK"|"140101001"|"Domestic Factoring with recourse without insurance"|"Domestic"|"With Recourse"|"Without Insurance"|"Fund"|"Non FCI"|"30"|"30"|"0.0"|""|"K0407068"|"2024-03-13"|"16:36:27"|"8"|""|"2"|"Short Term"|"Admin"|"2019-01-01"|"00:00:00"|"DO"|"WR"|"WO"|"F"|"NF"|"S"|"3.0"
+"KBANK"|"140101003"|"Domestic Factoring without Recourse without insurance"|"Domestic"|"Without Recourse"|"Without Insurance"|"Fund"|"Non FCI"|"0"|"1"|"0.0"|""|"K0407212"|"2020-08-17"|"13:08:12"|"2"|""|"2"|"Short Term"|"Admin"|"2019-01-01"|"00:00:00"|"DO"|"WO"|"WO"|"F"|"NF"|"S"|"0.0"
+"KBANK"|"140101004"|"Domestic Factoring without Recourse with insurance - Non FCI"|"Domestic"|"Without Recourse"|"With Insurance"|"Fund"|"Non FCI"|"0"|"1"|"0.0"|""|"K0407212"|"2020-08-17"|"13:08:14"|"2"|""|"2"|"Short Term"|"Admin"|"2019-01-01"|"00:00:00"|"DO"|"WO"|"WI"|"F"|"NF"|"S"|"0.0"
+"KBANK"|"140102001"|"Domestic Factoring with recourse without insurance Longterm "|"Domestic"|"With Recourse"|"Without Insurance"|"Fund"|"Non FCI"|"30"|"30"|"0.0"|""|"K0407212"|"2020-08-17"|"13:08:18"|"2"|""|"2"|"Long Term"|"Admin"|"2019-01-01"|"00:00:00"|"DO"|"WR"|"WO"|"F"|"NF"|"L"|"3.0"

@@ -225,3 +225,5 @@ columns_to_sum="decfeeperc decfeeamt"  # Example columns
 
 # Call function
 sum_columns_from_file "$file_path" "$columns_to_sum"
+
+https://urldefense.com/v3/__https:/kasikornbankgroup.sharepoint.com/:x:/s/DocumentRepository/Data*20-*20Analytics/EfpnMATmniBIuv17rNMgMLwB7Loy6N4VTPmvVxKVTtEvDA?e=XgUJJa__;JSU!!OrxsNty6D4my!4bE5VWHbxxGpzkVo2Dr0SzNYODHMb08s88TgVs5eKCY95rvYsUluHAUAopC-3ba3kA26isH0WnqkM2phJw3tzHJeeMURBgH6yj8$

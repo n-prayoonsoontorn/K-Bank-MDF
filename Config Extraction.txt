@@ -1,7 +1,16 @@
 https://ts.accenture.com/:p:/r/sites/KBank-MDF/_layouts/15/Doc.aspx?sourcedoc=%7B378E7E8C-F712-4A17-A29B-5B8B03AE2FE6%7D&file=MDP_Transition_Foundation_Ingestion.pptx&action=edit&mobileredirect=true
 
-
+NORMAL
 https://kasikornbankgroup.sharepoint.com/:f:/s/DocumentRepository/Data%20-%20Analytics/EgdMdeouYIdAmXfBgn_b9K8BfUx7Mo_63HRGVKVKCCi0jQ?e=QKtnk9
+
+FIX
+https://kasikornbankgroup.sharepoint.com/:f:/s/DocumentRepository/Data%20-%20Analytics/EsYhbVUi9T5AuZ3apnSWmLABkGIFJlmNOGpBMA2AHBJayA?e=MI0hwf
+
+DPND
+https://kasikornbankgroup.sharepoint.com/:f:/s/DocumentRepository/Data%20-%20Analytics/EkIbiPIukv1Iogzc9V5mFrYBZPmADrGLdlMkm7_uuD0SZw?e=eJp4tQ
+
+
+
 example:
  
 %sh cat /Volumes/mdpuat/artifact/config/mdp/transform/audit/job_config_tnfm_audit_curated_fctrng_fctrng_acct_prfl_dly.json

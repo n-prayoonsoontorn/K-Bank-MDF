@@ -1,5 +1,12 @@
 https://ts.accenture.com/:p:/r/sites/KBank-MDF/_layouts/15/Doc.aspx?sourcedoc=%7B378E7E8C-F712-4A17-A29B-5B8B03AE2FE6%7D&file=MDP_Transition_Foundation_Ingestion.pptx&action=edit&mobileredirect=true
 
+example:
+ 
+%sh cat /Volumes/mdpuat/artifact/config/mdp/transform/audit/job_config_tnfm_audit_curated_fctrng_fctrng_acct_prfl_dly.json
+ 
+ 
+%sh cat /Volumes/mdpuat/artifact/config/mdp/transform/audit/audit_config_curated_fctrng_fctrng_acct_prfl_dly.json
+
 Config Extraction
 
 Command -> /app/mdp/script/extraction/extraction_wrapper.sh <number_para> <pos_dt> <config_extraction_path>

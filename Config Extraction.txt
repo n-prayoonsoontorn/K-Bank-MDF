@@ -1,26 +1,4 @@
-https://kasikornbankgroup.sharepoint.com/:x:/r/sites/DocumentRepository/Data%20-%20Analytics/_layouts/15/Doc.aspx?sourcedoc=%7B36865B00-A0B7-4C4C-999D-E68B88764C55%7D&file=MDP_Technical_Validation_Audit_Tracking.xlsx&action=default&mobileredirect=true
 
-
-
-AUDIT FILE
-https://kasikornbankgroup.sharepoint.com/:f:/s/DocumentRepository/Data%20-%20Analytics/EjgoynsemV5NuVrlcAfnV2kBloqo5DGJ7Ha_l46WRgHybw?e=dFcvqA
-NORMAL
-https://kasikornbankgroup.sharepoint.com/:f:/s/DocumentRepository/Data%20-%20Analytics/EgdMdeouYIdAmXfBgn_b9K8BfUx7Mo_63HRGVKVKCCi0jQ?e=QKtnk9
-
-FIX
-https://kasikornbankgroup.sharepoint.com/:f:/s/DocumentRepository/Data%20-%20Analytics/EsYhbVUi9T5AuZ3apnSWmLABkGIFJlmNOGpBMA2AHBJayA?e=MI0hwf
-
-DPND
-https://kasikornbankgroup.sharepoint.com/:f:/s/DocumentRepository/Data%20-%20Analytics/EkIbiPIukv1Iogzc9V5mFrYBZPmADrGLdlMkm7_uuD0SZw?e=eJp4tQ
-
-
-
-example:
- 
-%sh cat /Volumes/mdpuat/artifact/config/mdp/transform/audit/job_config_tnfm_audit_curated_fctrng_fctrng_acct_prfl_dly.json
- 
- 
-%sh cat /Volumes/mdpuat/artifact/config/mdp/transform/audit/audit_config_curated_fctrng_fctrng_acct_prfl_dly.json
 
 Config Extraction
 

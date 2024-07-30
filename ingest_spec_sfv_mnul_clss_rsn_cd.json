@@ -1,0 +1,30 @@
+{
+  "job_name": "ingest_sfv_mnul_clss_rsn_cd_m",
+  "job_info": {
+    "source_name": "sfv",
+    "raw_catalog_name": "mdp{{env}}",
+    "raw_schema_name": "raw_sfv",
+    "raw_table_name": "sfv_mnul_clss_rsn_cd",
+    "persist_catalog_name": "mdp{{env}}",
+    "persist_schema_name": "persist_sfv",
+    "persist_table_name": "sfv_mnul_clss_rsn_cd"
+  },
+  "mapping": [
+    {
+      "source_column_name": "clsreason",
+      "target_column_name": "clsreason",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "by",
+      "target_column_name": "by",
+      "data_type": "string",
+      "column_logic": "rtrim(by)"
+    },
+    {
+      "source_column_name": "class_level",
+      "target_column_name": "class_level",
+      "data_type": "smallint"
+    }
+  ]
+}

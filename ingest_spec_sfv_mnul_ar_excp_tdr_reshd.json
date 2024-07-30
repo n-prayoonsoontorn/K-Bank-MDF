@@ -1,0 +1,32 @@
+{
+  "job_name": "ingest_sfv_mnul_ar_excp_tdr_reshd_m",
+  "job_info": {
+    "source_name": "sfv",
+    "raw_catalog_name": "mdp{{env}}",
+    "raw_schema_name": "raw_sfv",
+    "raw_table_name": "sfv_mnul_ar_excp_tdr_reshd",
+    "persist_catalog_name": "mdp{{env}}",
+    "persist_schema_name": "persist_sfv",
+    "persist_table_name": "sfv_mnul_ar_excp_tdr_reshd"
+  },
+  "mapping": [
+    {
+      "source_column_name": "ar_id",
+      "target_column_name": "ar_id",
+      "data_type": "string",
+      "column_logic": "rtrim(ar_id)"
+    },
+    {
+      "source_column_name": "ovrd_eft_dt",
+      "target_column_name": "ovrd_eft_dt",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(ovrd_eft_dt, 'yyyyMMdd',False)"
+    },
+    {
+      "source_column_name": "ovrd_ast_clss_st",
+      "target_column_name": "ovrd_ast_clss_st",
+      "data_type": "string",
+      "column_logic": "rtrim(ovrd_ast_clss_st)"
+    }
+  ]
+}

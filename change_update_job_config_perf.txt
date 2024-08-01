@@ -1,0 +1,22 @@
+transfrom_to_raw_task 
+	remove ->columns_params
+
+read_raw_from_table_task 
+	change filter_cond -> 
+		"filter_cond": "ptn_yyyy = '{{ptn_yyyy}}' AND ptn_mm = '{{ptn_mm}}' AND ptn_dd = '{{ptn_dd}}'"	
+		
+record_count_check_task 
+	change raw_filter_cond  -> 
+		"raw_filter_cond": "ptn_yyyy = '{{ptn_yyyy}}' AND ptn_mm = '{{ptn_mm}}' AND ptn_dd = '{{ptn_dd}}'",
+		
+	change perist filter cond ->
+		"persist_filter_cond": "ptn_yyyy = '{{ptn_yyyy}}' AND ptn_mm = '{{ptn_mm}}' AND ptn_dd = '{{ptn_dd}}'"
+		
+audit_data_task
+	change filter_cond -> 
+		"filter_cond": "ptn_yyyy = '{{ptn_yyyy}}' AND ptn_mm = '{{ptn_mm}}' AND ptn_dd = '{{ptn_dd}}'",
+
+delete 6+4 = 10  add 5
+increase 5 delete 10
+
+D3f@ultPwd#8

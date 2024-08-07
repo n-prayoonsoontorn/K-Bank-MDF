@@ -1,0 +1,92 @@
+{
+    "job_name": "extrct_dgtl_fctrng_fact_limit_d",
+    "pipeline_name": "ExtractionPipeline",
+    "area_name": "dgtl_fctrng",
+    "job_seq": "1",
+    "job_info": {
+        "data_source_type": "LocalLocation",
+        "file_name": "FACT_LIMIT_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.*",
+        "data_target_type": "ADLSLocation",
+        "data_target_filepath": "{{mdp_inbnd.filepath}}/dgtl_fctrng/FACT_LIMIT_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.*"
+    },
+    "tasks": {
+        "azcopy_data_transfer_task": {
+            "module_name": "AzCopyDataTransferTask",
+            "bypass_flag": "false",
+            "parameters": {
+                "azcopy_command": "cp",
+                "source": {
+                    "type": "LocalLocation",
+                    "filepath": "{{local_storage.filepath}}/dgtl_fctrng/FACT_LIMIT_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.*"
+                },
+                "target": {
+                    "type": "ADLSLocation",
+                    "account_name": "{{mdp_inbnd.account_name}}",
+                    "container_name": "{{mdp_inbnd.container_name}}",
+                    "sas_token": "{{mdp_inbnd.sas_token}}",
+                    "filepath": "{{mdp_inbnd.filepath}}/dgtl_fctrng/"
+                }
+            }
+        },
+        "source_data_extractor_task": {
+            "module_name": "OdbcDataExtractorTask",
+            "bypass_flag": "false",
+            "parameters": {
+                "connection_name": "dgtl_fctrng",
+                "query": "SELECT FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt, FACT_LIMIT_YYYYMMDD.txt FROM Not found",
+                "extract_file_location": "{{local_storage.filepath}}/dgtl_fctrng/",
+                "file_name_format": {
+                    "base_file_name": "FACT_LIMIT",
+                    "date_suffix": "{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}"
+                },
+                "full_file_name": "FACT_LIMIT_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}",
+                "batch_size": 1000000,
+                "allow_zero_record": true,
+                "file_extension": "txt",
+                "write_property": {
+                    "format": "csv",
+                    "header": true,
+                    "option": {
+                        "delimiter": "|",
+                        "quotechar": "\"",
+                        "doublequote": false,
+                        "quoting": "QUOTE_ALL",
+                        "escapechar": "\\"
+                    }
+                }
+            }
+        },
+        "generate_control_file_task": {
+            "module_name": "OdbcControlFileGeneratorTask",
+            "bypass_flag": "false",
+            "parameters": {
+                "connection_name": "dgtl_fctrng",
+                "query": "SELECT '{{pos_dt}}' AS date_of_data, FORMAT(SYSDATETIME(), 'yyyyMMdd') AS date_of_generated_data, COUNT(*) AS number_of_records, 'FACT_LIMIT_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}.txt' AS source_file_name FROM Not found",
+                "extract_file_location": "{{local_storage.filepath}}/dgtl_fctrng/",
+                "header": true,
+                "header_columns": [
+                    "date_of_data",
+                    "date_of_generated_data",
+                    "number_of_records",
+                    "source_file_name"
+                ],
+                "file_name_format": {
+                    "base_file_name": "FACT_LIMIT",
+                    "date_suffix": "{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}"
+                },
+                "full_file_name": "FACT_LIMIT_{{ptn_yyyy}}{{ptn_mm}}{{ptn_dd}}",
+                "file_extension": "ctl",
+                "write_property": {
+                    "format": "csv",
+                    "header": true,
+                    "option": {
+                        "delimiter": "|",
+                        "quotechar": "\"",
+                        "quoting": "QUOTE_ALL",
+                        "escapechar": "\\"
+                    }
+                }
+            }
+        }
+    }
+}

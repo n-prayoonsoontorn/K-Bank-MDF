@@ -1,0 +1,251 @@
+{
+  "job_name": "ingest_pcb_loan_common_fee_info_d",
+  "job_info": {
+    "source_name": "pcb_loan",
+    "raw_catalog_name": "mdp{{env}}",
+    "raw_schema_name": "raw_pcb_loan",
+    "raw_table_name": "pcb_loan_common_fee_info",
+    "persist_catalog_name": "mdp{{env}}",
+    "persist_schema_name": "persist_pcb_loan",
+    "persist_table_name": "pcb_loan_common_fee_info"
+  },
+  "mapping": [
+    {
+      "source_column_name": "prfl_ac_ar_id",
+      "target_column_name": "prfl_ac_ar_id",
+      "data_type": "string",
+      "column_logic": "rtrim(prfl_ac_ar_id)"
+    },
+    {
+      "source_column_name": "ac_ar_id",
+      "target_column_name": "ac_ar_id",
+      "data_type": "string",
+      "column_logic": "rtrim(ac_ar_id)"
+    },
+    {
+      "source_column_name": "fee_type",
+      "target_column_name": "fee_type",
+      "data_type": "string",
+      "column_logic": "rtrim(fee_type)"
+    },
+    {
+      "source_column_name": "cal_code",
+      "target_column_name": "cal_code",
+      "data_type": "string",
+      "column_logic": "rtrim(cal_code)"
+    },
+    {
+      "source_column_name": "min_fee_amt",
+      "target_column_name": "min_fee_amt",
+      "data_type": "decimal(18,2)"
+    },
+    {
+      "source_column_name": "min_term",
+      "target_column_name": "min_term",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "next_min_fee_amt",
+      "target_column_name": "next_min_fee_amt",
+      "data_type": "decimal(18,2)"
+    },
+    {
+      "source_column_name": "fir_du_m",
+      "target_column_name": "fir_du_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "fir_du_d",
+      "target_column_name": "fir_du_d",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "next_du_open_m",
+      "target_column_name": "next_du_open_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "next_du_open_d",
+      "target_column_name": "next_du_open_d",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "next_du_close_m",
+      "target_column_name": "next_du_close_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "next_du_close_d",
+      "target_column_name": "next_du_close_d",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "gra_pe_m",
+      "target_column_name": "gra_pe_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc",
+      "target_column_name": "scc",
+      "data_type": "string",
+      "column_logic": "rtrim(scc)"
+    },
+    {
+      "source_column_name": "min_amt_scc",
+      "target_column_name": "min_amt_scc",
+      "data_type": "decimal(18,2)"
+    },
+    {
+      "source_column_name": "scc_mi_amount",
+      "target_column_name": "scc_mi_amount",
+      "data_type": "decimal(18,2)"
+    },
+    {
+      "source_column_name": "scc_mi_m",
+      "target_column_name": "scc_mi_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc_next_min_fee_amt",
+      "target_column_name": "scc_next_min_fee_amt",
+      "data_type": "decimal(18,2)"
+    },
+    {
+      "source_column_name": "scc_fi_m",
+      "target_column_name": "scc_fi_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc_fi_d",
+      "target_column_name": "scc_fi_d",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc_next_du_open_m",
+      "target_column_name": "scc_next_du_open_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc_next_du_open_d",
+      "target_column_name": "scc_next_du_open_d",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc_next_du_close_m",
+      "target_column_name": "scc_next_du_close_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc_next_du_close_d",
+      "target_column_name": "scc_next_du_close_d",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "scc_gr_m",
+      "target_column_name": "scc_gr_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "from_amt_tier1",
+      "target_column_name": "from_amt_tier1",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "to_amt_tier1",
+      "target_column_name": "to_amt_tier1",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "fee_rate_1",
+      "target_column_name": "fee_rate_1",
+      "data_type": "decimal(8,5)"
+    },
+    {
+      "source_column_name": "from_amt_tier2",
+      "target_column_name": "from_amt_tier2",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "to_amt_tier2",
+      "target_column_name": "to_amt_tier2",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "fee_rate_2",
+      "target_column_name": "fee_rate_2",
+      "data_type": "decimal(8,5)"
+    },
+    {
+      "source_column_name": "from_amt_tier3",
+      "target_column_name": "from_amt_tier3",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "to_amt_tier3",
+      "target_column_name": "to_amt_tier3",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "fee_rate_3",
+      "target_column_name": "fee_rate_3",
+      "data_type": "decimal(8,5)"
+    },
+    {
+      "source_column_name": "from_amt_tier4",
+      "target_column_name": "from_amt_tier4",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "to_amt_tier4",
+      "target_column_name": "to_amt_tier4",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "fee_rate_4",
+      "target_column_name": "fee_rate_4",
+      "data_type": "decimal(8,5)"
+    },
+    {
+      "source_column_name": "from_amt_tier5",
+      "target_column_name": "from_amt_tier5",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "to_amt_tier5",
+      "target_column_name": "to_amt_tier5",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "fee_rate_5",
+      "target_column_name": "fee_rate_5",
+      "data_type": "decimal(8,5)"
+    },
+    {
+      "source_column_name": "nom_pay",
+      "target_column_name": "nom_pay",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "last_accr_dt",
+      "target_column_name": "last_accr_dt",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`last_accr_dt`, 'yyyyMMdd',False)"
+    },
+    {
+      "source_column_name": "next_du_m",
+      "target_column_name": "next_du_m",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "next_du_d",
+      "target_column_name": "next_du_d",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "prev_last_accr_dt",
+      "target_column_name": "prev_last_accr_dt",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`prev_last_accr_dt`, 'yyyyMMdd',False)"
+    }
+  ]
+}

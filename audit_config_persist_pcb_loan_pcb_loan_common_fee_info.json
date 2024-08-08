@@ -1,0 +1,51 @@
+{
+    "data_source": {
+        "asset": "pcb_loan_common_fee_info",
+        "context_root_dir": "/Volumes/mdp{{env}}/artifact/data_quality/gx",
+        "index_column_names": [],
+        "name": "pcb_loan"
+    },
+    "expectation_suites": [
+        {
+            "expectation_suite_name": "tech_vld_suite_persist_pcb_loan_pcb_loan_common_fee_info",
+            "expectations": [
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "prfl_ac_ar_id"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "ac_ar_id"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "fee_type"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                }
+            ]
+        }
+    ],
+    "validators": [
+        {
+            "expectation_suite_name": "tech_vld_suite_persist_pcb_loan_pcb_loan_common_fee_info",
+            "validator_name": "persist_pcb_loan_pcb_loan_common_fee_info_checkpoint"
+        }
+    ]
+}

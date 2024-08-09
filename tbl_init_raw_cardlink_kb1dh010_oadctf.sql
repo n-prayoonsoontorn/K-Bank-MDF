@@ -97,7 +97,7 @@ Def(Th):",
 Def(Th):",
 	dh010_trm_type             	string       comment "Def(En): Terminal Type.
 Def(Th):",
-	dh010-filler-1             	string       comment "Def(En): Reserve field.
+	dh010_filler_1             	string       comment "Def(En): Reserve field.
 Def(Th):",
 	dh010_e_commerce_flag      	string       comment "Def(En): E-commerce Flag
 'M', 'N', 'E'
@@ -126,7 +126,7 @@ Def(Th):",
 Def(Th):",
 	dh010_service_code         	string       comment "Def(En): Service Code
 Def(Th):",
-	dh010-filler-2             	string       comment "Def(En): Space
+	dh010_filler_2             	string       comment "Def(En): Space
 Def(Th):",
 	dh010_trm_chip_ind         	string       comment "Def(En): Terminal Chip Indicator. Valid values:
 N = POS TERMINAL 
@@ -134,7 +134,7 @@ Y = CHIP TERMINAL
 M = CONTACTLESS M/CHIP
 P = CONTACTLESS MGT STRP
 Def(Th):",
-	dh010-filler-3             	string       comment "Def(En): Space
+	dh010_filler_3             	string       comment "Def(En): Space
 Def(Th):",
 	dh010_clcb_ind             	string       comment "Def(En): CLCB (Royalty system) Indicator. Valid value: Y or N
 Def(Th):",

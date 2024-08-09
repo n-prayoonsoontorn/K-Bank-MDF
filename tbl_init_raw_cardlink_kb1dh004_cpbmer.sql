@@ -716,7 +716,7 @@ Def(Th):",
 	1dh004_d_pl_category              	string       comment "Def(En): The Standard Industry Classification Code (SIC)
 
 Def(Th):",
-	1dh004-d-filler-1                 	string       comment "Def(En): Reserved Field
+	1dh004_d_filler_1                 	string       comment "Def(En): Reserved Field
 
 Def(Th):",
 	1dh004_d_jc_category              	string       comment "Def(En): The merchant category code as defined by JCB and which is also known as the Standard Industry Classification Code (SIC).
@@ -899,7 +899,7 @@ Def(Th):",
 	1dh004_d_jcb_area_code            	string       comment "Def(En): JCB Area CODE 
 
 Def(Th):",
-	1dh004-d-jcb-filler               	string       comment "Def(En): 
+	1dh004_d_jcb_filler               	string       comment "Def(En): 
 Def(Th):",
 	1dh004_d_chg_admin                	string       comment "Def(En): 
 Def(Th):",
@@ -2121,7 +2121,7 @@ Def(Th):",
 	1dh004_d_user_acct                	string       comment "Def(En): user account
 
 Def(Th):",
-	1dh004-d-user-filler              	string       comment "Def(En): user
+	1dh004_d_user_filler              	string       comment "Def(En): user
 
 Def(Th):",
 	1dh004_d_multi_ind                	string       comment "Def(En): multi indicator

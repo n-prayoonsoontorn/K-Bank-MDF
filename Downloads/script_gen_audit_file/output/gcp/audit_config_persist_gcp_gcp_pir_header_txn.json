@@ -1,0 +1,257 @@
+{
+    "data_source": {
+        "asset": "gcp_pir_header_txn",
+        "context_root_dir": "/Volumes/mdp{{env}}/artifact/data_quality/gx",
+        "index_column_names": [
+            "pos_dt",
+            "pir_nmbr"
+        ],
+        "name": "gcp"
+    },
+    "expectation_suites": [
+        {
+            "expectation_suite_name": "tech_vld_suite_persist_gcp_gcp_pir_header_txn",
+            "expectations": [
+                {
+                    "expectation_type": "expect_compound_columns_to_be_unique",
+                    "kwargs": {
+                        "column_list": [
+                            "pos_dt",
+                            "pir_nmbr"
+                        ]
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0001"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "pir_nmbr"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "product_code"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "activation_date"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "client_code"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "arrangement_code"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "client_debit_date"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "client_disbursement_date"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "total_instruments"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "total_amnt"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "reported_instruments"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "reported_amnt"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "pir_date"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "entry_date"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "total_inst_released"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "total_released_amnt"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "maker_code"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "maker_datetime"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "maker_branch_code"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "debit_ccy_code"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "payment_priority_flag"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "charge_ccy_level"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                },
+                {
+                    "expectation_type": "expect_column_values_to_not_be_null",
+                    "kwargs": {
+                        "column": "seller_code"
+                    },
+                    "meta": {
+                        "level": "WARNING",
+                        "rule_id": "TECH_VLD_0002"
+                    }
+                }
+            ]
+        }
+    ],
+    "validators": [
+        {
+            "expectation_suite_name": "tech_vld_suite_persist_gcp_gcp_pir_header_txn",
+            "validator_name": "persist_gcp_gcp_pir_header_txn_checkpoint"
+        }
+    ]
+}

@@ -1,0 +1,768 @@
+{
+  "job_name": "ingest_cardlink_kb1dh010_oadctf_d",
+  "job_info": {
+    "source_name": "cardlink",
+    "raw_catalog_name": "mdp{{env}}",
+    "raw_schema_name": "raw_cardlink",
+    "raw_table_name": "cardlink_kb1dh010_oadctf",
+    "persist_catalog_name": "mdp{{env}}",
+    "persist_schema_name": "persist_cardlink",
+    "persist_table_name": "cardlink_kb1dh010_oadctf"
+  },
+  "mapping": [
+    {
+      "source_column_name": "dh010_merch_nbr",
+      "target_column_name": "dh010_merch_nbr",
+      "data_type": "bigint"
+    },
+    {
+      "source_column_name": "dh010_term_id",
+      "target_column_name": "dh010_term_id",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_term_id)"
+    },
+    {
+      "source_column_name": "dh010_edc_ind",
+      "target_column_name": "dh010_edc_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_edc_ind)"
+    },
+    {
+      "source_column_name": "dh010_term_ind",
+      "target_column_name": "dh010_term_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_term_ind)"
+    },
+    {
+      "source_column_name": "dh010_action_ind",
+      "target_column_name": "dh010_action_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_action_ind)"
+    },
+    {
+      "source_column_name": "dh010_current_batch_nbr",
+      "target_column_name": "dh010_current_batch_nbr",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_eod_cutoff_batch_nbr",
+      "target_column_name": "dh010_eod_cutoff_batch_nbr",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_last_maint_date",
+      "target_column_name": "dh010_last_maint_date",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_last_maint_date`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_last_settlement_date",
+      "target_column_name": "dh010_last_settlement_date",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_last_settlement_date`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_total_debit_nbr_1",
+      "target_column_name": "dh010_total_debit_nbr_1",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_total_debit_amt_1",
+      "target_column_name": "dh010_total_debit_amt_1",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "dh010_total_credit_nbr_1",
+      "target_column_name": "dh010_total_credit_nbr_1",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_total_credit_amt_1",
+      "target_column_name": "dh010_total_credit_amt_1",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "dh010_total_debit_nbr_2",
+      "target_column_name": "dh010_total_debit_nbr_2",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_total_debit_amt_2",
+      "target_column_name": "dh010_total_debit_amt_2",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "dh010_total_credit_nbr_2",
+      "target_column_name": "dh010_total_credit_nbr_2",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_total_credit_amt_2",
+      "target_column_name": "dh010_total_credit_amt_2",
+      "data_type": "decimal(15,2)"
+    },
+    {
+      "source_column_name": "dh010_cur_total_debit_nbr",
+      "target_column_name": "dh010_cur_total_debit_nbr",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_cur_total_debit_amt",
+      "target_column_name": "dh010_cur_total_debit_amt",
+      "data_type": "decimal(13,2)"
+    },
+    {
+      "source_column_name": "dh010_cur_total_credit_nbr",
+      "target_column_name": "dh010_cur_total_credit_nbr",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_cur_total_credit_amt",
+      "target_column_name": "dh010_cur_total_credit_amt",
+      "data_type": "decimal(13,2)"
+    },
+    {
+      "source_column_name": "dh010_visa_total_nbr",
+      "target_column_name": "dh010_visa_total_nbr",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_visa_total_amount",
+      "target_column_name": "dh010_visa_total_amount",
+      "data_type": "decimal(13,2)"
+    },
+    {
+      "source_column_name": "dh010_mc_total_nbr",
+      "target_column_name": "dh010_mc_total_nbr",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_mc_total_amount",
+      "target_column_name": "dh010_mc_total_amount",
+      "data_type": "decimal(13,2)"
+    },
+    {
+      "source_column_name": "dh010_private_total_nbr",
+      "target_column_name": "dh010_private_total_nbr",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_private_total_amount",
+      "target_column_name": "dh010_private_total_amount",
+      "data_type": "decimal(13,2)"
+    },
+    {
+      "source_column_name": "dh010_t4_previous_batch_nbr",
+      "target_column_name": "dh010_t4_previous_batch_nbr",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_trm_cv2_ind",
+      "target_column_name": "dh010_trm_cv2_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_cv2_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_cv2_resp",
+      "target_column_name": "dh010_trm_cv2_resp",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_cv2_resp)"
+    },
+    {
+      "source_column_name": "dh010_redem_count_pts",
+      "target_column_name": "dh010_redem_count_pts",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_redem_total_pts",
+      "target_column_name": "dh010_redem_total_pts",
+      "data_type": "bigint"
+    },
+    {
+      "source_column_name": "dh010_redem_count_voucher",
+      "target_column_name": "dh010_redem_count_voucher",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_redem_total_voucher",
+      "target_column_name": "dh010_redem_total_voucher",
+      "data_type": "bigint"
+    },
+    {
+      "source_column_name": "dh010_redem_count_discount",
+      "target_column_name": "dh010_redem_count_discount",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_redem_total_discount",
+      "target_column_name": "dh010_redem_total_discount",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_trm_type",
+      "target_column_name": "dh010_trm_type",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_type)"
+    },
+    {
+      "source_column_name": "dh010_e_commerce_flag",
+      "target_column_name": "dh010_e_commerce_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_e_commerce_flag)"
+    },
+    {
+      "source_column_name": "dh010_recurring_flag",
+      "target_column_name": "dh010_recurring_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_recurring_flag)"
+    },
+    {
+      "source_column_name": "dh010_trm_multi_ind",
+      "target_column_name": "dh010_trm_multi_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_multi_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_master_ind",
+      "target_column_name": "dh010_trm_master_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_master_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_open_date",
+      "target_column_name": "dh010_trm_open_date",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_trm_open_date`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_trm_owner_ind",
+      "target_column_name": "dh010_trm_owner_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_owner_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_count_ind",
+      "target_column_name": "dh010_trm_count_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_count_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_equip_ind",
+      "target_column_name": "dh010_trm_equip_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_equip_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_serial_ind",
+      "target_column_name": "dh010_trm_serial_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_serial_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_other_ind",
+      "target_column_name": "dh010_trm_other_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_other_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_appr_ind",
+      "target_column_name": "dh010_trm_appr_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_appr_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_join_ind",
+      "target_column_name": "dh010_trm_join_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_join_ind)"
+    },
+    {
+      "source_column_name": "dh010_service_code",
+      "target_column_name": "dh010_service_code",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_service_code)"
+    },
+    {
+      "source_column_name": "dh010_trm_chip_ind",
+      "target_column_name": "dh010_trm_chip_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_chip_ind)"
+    },
+    {
+      "source_column_name": "dh010_clcb_ind",
+      "target_column_name": "dh010_clcb_ind",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_clcb_ind)"
+    },
+    {
+      "source_column_name": "dh010_trm_pin_capt_code",
+      "target_column_name": "dh010_trm_pin_capt_code",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_trm_pin_capt_code)"
+    },
+    {
+      "source_column_name": "dh010_pin_block_format",
+      "target_column_name": "dh010_pin_block_format",
+      "data_type": "smallint"
+    },
+    {
+      "source_column_name": "dh010_encryption_flag",
+      "target_column_name": "dh010_encryption_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_encryption_flag)"
+    },
+    {
+      "source_column_name": "dh010_kcv_resp_flag",
+      "target_column_name": "dh010_kcv_resp_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_kcv_resp_flag)"
+    },
+    {
+      "source_column_name": "dh010_next_profile_id",
+      "target_column_name": "dh010_next_profile_id",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_next_profile_id)"
+    },
+    {
+      "source_column_name": "dh010_next_profile_dte",
+      "target_column_name": "dh010_next_profile_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_next_profile_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_curr_profile_id",
+      "target_column_name": "dh010_curr_profile_id",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_curr_profile_id)"
+    },
+    {
+      "source_column_name": "dh010_curr_profile_dte",
+      "target_column_name": "dh010_curr_profile_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_curr_profile_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_scheme_flag",
+      "target_column_name": "dh010_ntmk_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntmk_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_key_part1",
+      "target_column_name": "dh010_ntmk_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntmk_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_key_part2",
+      "target_column_name": "dh010_ntmk_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntmk_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_key_part3",
+      "target_column_name": "dh010_ntmk_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntmk_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_kcv_short",
+      "target_column_name": "dh010_ntmk_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntmk_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_kcv_addl",
+      "target_column_name": "dh010_ntmk_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntmk_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_load_dte",
+      "target_column_name": "dh010_ntmk_load_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ntmk_load_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ntmk_effective_dte",
+      "target_column_name": "dh010_ntmk_effective_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ntmk_effective_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ntpk_scheme_flag",
+      "target_column_name": "dh010_ntpk_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntpk_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ntpk_key_part1",
+      "target_column_name": "dh010_ntpk_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntpk_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ntpk_key_part2",
+      "target_column_name": "dh010_ntpk_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntpk_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ntpk_key_part3",
+      "target_column_name": "dh010_ntpk_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntpk_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ntpk_kcv_short",
+      "target_column_name": "dh010_ntpk_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntpk_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ntpk_kcv_addl",
+      "target_column_name": "dh010_ntpk_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntpk_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ntpk_load_dte",
+      "target_column_name": "dh010_ntpk_load_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ntpk_load_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ntak_scheme_flag",
+      "target_column_name": "dh010_ntak_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntak_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ntak_key_part1",
+      "target_column_name": "dh010_ntak_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntak_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ntak_key_part2",
+      "target_column_name": "dh010_ntak_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntak_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ntak_key_part3",
+      "target_column_name": "dh010_ntak_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntak_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ntak_kcv_short",
+      "target_column_name": "dh010_ntak_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntak_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ntak_kcv_addl",
+      "target_column_name": "dh010_ntak_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ntak_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ntak_load_dte",
+      "target_column_name": "dh010_ntak_load_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ntak_load_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ctmk_scheme_flag",
+      "target_column_name": "dh010_ctmk_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctmk_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ctmk_key_part1",
+      "target_column_name": "dh010_ctmk_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctmk_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ctmk_key_part2",
+      "target_column_name": "dh010_ctmk_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctmk_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ctmk_key_part3",
+      "target_column_name": "dh010_ctmk_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctmk_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ctmk_kcv_short",
+      "target_column_name": "dh010_ctmk_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctmk_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ctmk_kcv_addl",
+      "target_column_name": "dh010_ctmk_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctmk_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ctmk_effective_dte",
+      "target_column_name": "dh010_ctmk_effective_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ctmk_effective_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ctpk_scheme_flag",
+      "target_column_name": "dh010_ctpk_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctpk_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ctpk_key_part1",
+      "target_column_name": "dh010_ctpk_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctpk_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ctpk_key_part2",
+      "target_column_name": "dh010_ctpk_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctpk_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ctpk_key_part3",
+      "target_column_name": "dh010_ctpk_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctpk_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ctpk_kcv_short",
+      "target_column_name": "dh010_ctpk_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctpk_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ctpk_kcv_addl",
+      "target_column_name": "dh010_ctpk_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctpk_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ctpk_effective_dte",
+      "target_column_name": "dh010_ctpk_effective_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ctpk_effective_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ctak_scheme_flag",
+      "target_column_name": "dh010_ctak_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctak_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ctak_key_part1",
+      "target_column_name": "dh010_ctak_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctak_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ctak_key_part2",
+      "target_column_name": "dh010_ctak_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctak_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ctak_key_part3",
+      "target_column_name": "dh010_ctak_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctak_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ctak_kcv_short",
+      "target_column_name": "dh010_ctak_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctak_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ctak_kcv_addl",
+      "target_column_name": "dh010_ctak_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ctak_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ctak_effective_dte",
+      "target_column_name": "dh010_ctak_effective_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ctak_effective_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ltmk_scheme_flag",
+      "target_column_name": "dh010_ltmk_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltmk_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ltmk_key_part1",
+      "target_column_name": "dh010_ltmk_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltmk_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ltmk_key_part2",
+      "target_column_name": "dh010_ltmk_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltmk_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ltmk_key_part3",
+      "target_column_name": "dh010_ltmk_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltmk_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ltmk_kcv_short",
+      "target_column_name": "dh010_ltmk_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltmk_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ltmk_kcv_addl",
+      "target_column_name": "dh010_ltmk_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltmk_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ltmk_effective_dte",
+      "target_column_name": "dh010_ltmk_effective_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ltmk_effective_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ltpk_scheme_flag",
+      "target_column_name": "dh010_ltpk_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltpk_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ltpk_key_part1",
+      "target_column_name": "dh010_ltpk_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltpk_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ltpk_key_part2",
+      "target_column_name": "dh010_ltpk_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltpk_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ltpk_key_part3",
+      "target_column_name": "dh010_ltpk_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltpk_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ltpk_kcv_short",
+      "target_column_name": "dh010_ltpk_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltpk_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ltpk_kcv_addl",
+      "target_column_name": "dh010_ltpk_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltpk_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ltpk_effective_dte",
+      "target_column_name": "dh010_ltpk_effective_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ltpk_effective_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_ltak_scheme_flag",
+      "target_column_name": "dh010_ltak_scheme_flag",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltak_scheme_flag)"
+    },
+    {
+      "source_column_name": "dh010_ltak_key_part1",
+      "target_column_name": "dh010_ltak_key_part1",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltak_key_part1)"
+    },
+    {
+      "source_column_name": "dh010_ltak_key_part2",
+      "target_column_name": "dh010_ltak_key_part2",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltak_key_part2)"
+    },
+    {
+      "source_column_name": "dh010_ltak_key_part3",
+      "target_column_name": "dh010_ltak_key_part3",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltak_key_part3)"
+    },
+    {
+      "source_column_name": "dh010_ltak_kcv_short",
+      "target_column_name": "dh010_ltak_kcv_short",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltak_kcv_short)"
+    },
+    {
+      "source_column_name": "dh010_ltak_kcv_addl",
+      "target_column_name": "dh010_ltak_kcv_addl",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_ltak_kcv_addl)"
+    },
+    {
+      "source_column_name": "dh010_ltak_effective_dte",
+      "target_column_name": "dh010_ltak_effective_dte",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_ltak_effective_dte`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_key_last_maint_userid",
+      "target_column_name": "dh010_key_last_maint_userid",
+      "data_type": "string",
+      "column_logic": "rtrim(dh010_key_last_maint_userid)"
+    },
+    {
+      "source_column_name": "dh010_key_last_maint_date",
+      "target_column_name": "dh010_key_last_maint_date",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_key_last_maint_date`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_key_last_maint_time",
+      "target_column_name": "dh010_key_last_maint_time",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_earliest_txn_date",
+      "target_column_name": "dh010_earliest_txn_date",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_earliest_txn_date`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_earliest_txn_time",
+      "target_column_name": "dh010_earliest_txn_time",
+      "data_type": "integer"
+    },
+    {
+      "source_column_name": "dh010_autopost_date",
+      "target_column_name": "dh010_autopost_date",
+      "data_type": "date",
+      "column_logic": "mdp{{env}}.udf.convert_dt(`dh010_autopost_date`, 'yyyy-MM-dd',False)"
+    },
+    {
+      "source_column_name": "dh010_autopost_time",
+      "target_column_name": "dh010_autopost_time",
+      "data_type": "integer"
+    }
+  ]
+}

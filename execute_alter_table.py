@@ -1,45 +1,21 @@
-# Databricks notebook source
-# MAGIC %md 
-# MAGIC ### Import Libraries
-
-# COMMAND ----------
-
-import os
-from pyspark.sql.functions import col, expr
-
-# COMMAND ----------
-
-# MAGIC %md ### Environment configs
-
-# COMMAND ----------
-
-env = os.environ["ENVIRONMENT"]
-catalog = f"mdp{env}" 
-print("Environment Information")
-print("env:", env)
-print("catalog:", catalog)
-partition_list = ['ptn_yyyy','ptn_mm','ptn_dd']
-
-# COMMAND ----------
-
-table_name = 'sfv_mnul_lst_hol_wknd_dt'
-table_df = spark.table(f"{catalog}.persist_sfv.{table_name}")
-
-alter_sql_persist  = f"""
-ALTER TABLE {catalog}.persist_sfv.{table_name}
-ALTER COLUMN holiday COMMENT 'Def(En): Holiday Date\nDef(Th): วันที่ของวันหยุดนักขัตฤกษ์'
-"""
-
-alter_sql_raw  = f"""
-ALTER TABLE {catalog}.raw_sfv.{table_name}
-ALTER COLUMN holiday COMMENT 'Def(En): Holiday Date\nDef(Th): วันที่ของวันหยุดนักขัตฤกษ์'
-"""
-
-spark.sql(alter_sql_persist)
-spark.sql(alter_sql_raw)
-print("Column 'holiday' comment updated successfully.")
-
-
-# COMMAND ----------
-
-dbutils.notebook.exit("SUCCESS")
+-- Databricks notebook source
+CREATE OR REPLACE FUNCTION ${catalog}.udf_rbac.rbac_column_mcl_host_confidential_1_4(
+  _column_value STRING, 
+  _anyid STRING
+) 
+RETURNS STRING
+RETURN (
+  CASE 
+    WHEN LEFT(_anyid, 1) = 'I' THEN
+      CASE 
+        WHEN ${catalog}.udf_rbac.check_privilege('confidential_1', 'mcl_host', 'column', 'persist') THEN _column_value
+        ELSE ${catalog}.udf.eban_sha2(_column_value)
+      END
+    WHEN LEFT(_anyid, 1) = 'M' THEN
+      CASE 
+        WHEN ${catalog}.udf_rbac.check_privilege('confidential_4', 'mcl_host', 'column', 'persist') THEN _column_value
+        ELSE ${catalog}.udf.eban_sha2(_column_value)
+      END
+    ELSE _column_value  
+  END
+);
